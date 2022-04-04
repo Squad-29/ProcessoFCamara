@@ -14,17 +14,11 @@ import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDcMUieedxayH_sh95iTcnjY6avvyFpe6c",
-
   authDomain: "teste-fcamara-b5fc2.firebaseapp.com",
-
   projectId: "teste-fcamara-b5fc2",
-
   storageBucket: "teste-fcamara-b5fc2.appspot.com",
-
   messagingSenderId: "530027337097",
-
   appId: "1:530027337097:web:b98acd9071092dd121bd58",
-
   measurementId: "G-H1EBWGHFK0",
 };
 
@@ -33,10 +27,3 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const analytics = getAnalytics(app);
-
-async function getCharacter(db) {
-  const charCol = collection(db, "character");
-  const charSnapshot = await getDocs(charCol);
-  const charList = charSnapshot.docs.map((doc) => doc.data());
-  return charList;
-}
