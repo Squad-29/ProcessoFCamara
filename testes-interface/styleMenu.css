@@ -1,0 +1,55 @@
+.size{
+    position: fixed;
+    display: none;
+}
+
+.size .field{
+    width: 300px;
+    background:#EC6603 ;
+    color: #fff;
+    padding: 5px;
+    border:solid 1px #EC6603;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all .4s ease-in-out;
+}
+
+.size.field:hover{
+    border:solid 1px #fff;
+    box-shadow: 0 0 5px #999;
+    display: initial;
+}
+
+.size>ul.list{
+    position: absolute;
+    left: -320px;
+    top: 30px;
+    z-index: 999;
+    width: 300px;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    background: #fff;
+    color: #333;
+    box-shadow: 0 0 5px #999;
+    border-radius: 5px;
+}
+
+.size>ul.list li{
+    padding: 10px;
+    border-bottom: solid 1px #ccc;
+}
+
+.size>ul.list li:hover{
+    background: #EC6603;
+    color: #fff;
+}
+
+.size>ul.list li:last-child{
+    border:none;
+}
+
+#resultado{
+    position: absolute;
+    z-index: 500;
+}

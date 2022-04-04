@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página inicial</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="styleMenu.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+</head>
+<body>
+	<div id="navbar">
+		<button id="menu" class="field">MENU</button>	
+		<div class="size" id="popup"> 
+			<ul class="list">
+				<li>opcao 1</li>
+				<li>opcao 2</li>
+				<li>opcao 3</li>
+				<li>opcao 4</li>
+			</ul>
+		</div>	
+
+		<button id="cadastro">CADASTRO</button>		
+		<select id="lista">
+		</select>	
+
+		<!-- <div class="alteracao">
+			<input type="text" id="nomeAlt" placeholder="nome">
+			<input type="text" id="especAlt" placeholder="especialidade">
+			<button type="button" id="atualizar">atualizar</button>
+		</div> -->
+
+		<div class="cadastro">
+			<input type="text" id="nomeNovo" placeholder="nome">
+			<input type="text" id="especNovo" placeholder="especialidade">
+			<button type="button" id="inserir">inserir</button>
+		</div>
+			
+	</div>
+	<div class="content">
+		<div id="resultado"></div>		
+		<div id="main">
+			<div id="info"></div>
+		</div>
+	</div>	
+</body>
+<script src="script.js"></script>	
+</html>

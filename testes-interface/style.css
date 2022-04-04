@@ -1,0 +1,87 @@
+@import url('http://fonts.cdnfonts.com/css/futura-pt?styles=117663,117668,117666');
+@import url('http://fonts.cdnfonts.com/css/mostin');
+
+body{    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: stretch;
+}
+
+#navbar{
+    display: flex;
+    width: 100vw;  
+    background: rgb(254, 68, 0);
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-right:2px solid rgb(43, 43, 43) ;
+    
+}
+
+#navbar select {
+    margin-left:50px ;
+}
+button, select{
+    height: 30px;
+}
+
+input{
+    height: 25px;
+}
+
+.cadastro, .alteracao{
+    margin-left: 50px;
+}
+
+.contact a{
+    position: relative;
+    left:75px;
+    bottom: -50px;
+    padding-right: 10px;
+}
+
+#main{
+    background-color: azure;
+    width: 100vw;
+    height: 100vh;
+}
+
+#info{
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#divMentor{
+    background-color: green; 
+    color: white; 
+    width: 150px; 
+    height: 150px; 
+    margin:15px; 
+    font-size:30px;
+}
+
+@media (max-width: 1000px) {
+    #navbar input{
+        width: 40px;
+    }     
+    
+    #divMentor{
+        color: red;
+    }    
+}
+
+@media (max-width:600px) {
+    #info{
+        flex-direction: column;
+    }        
+}
