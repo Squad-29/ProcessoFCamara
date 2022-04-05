@@ -55,33 +55,47 @@ input{
 }
 
 #info{
-    padding: 100px;
+    padding-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #divMentor{
-    background-color: green; 
+    background-color: rgb(95, 95, 95); 
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px #000;
     color: white; 
-    width: 150px; 
-    height: 150px; 
+    min-width: 250px; 
+    min-height: 200px; 
     margin:15px; 
     font-size:30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease-in-out;
+  
+}
+
+#divMentor:hover{
+    transform: scale(1.02) ;
+    cursor: pointer;
 }
 
 @media (max-width: 1000px) {
     #navbar input{
         width: 40px;
-    }     
-    
-    #divMentor{
-        color: red;
-    }    
+    }   
 }
 
 @media (max-width:600px) {
     #info{
         flex-direction: column;
-    }        
+    } 
+    
+    #divMentor{
+        padding: 0;
+    }         
 }
