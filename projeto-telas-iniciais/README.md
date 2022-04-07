@@ -8,5 +8,5 @@ Tanto a tela de login quanto a de usuário, utiliza do WebStoragem para armazena
 A lista de mentores exibida na tela inicial, vem de um array de objetos e possui um filtro por especialidade, porém, ela será alterada para retornar os dados provenientes do cadastro do mentores, também via WebStorage.
 
 Frameworks e Bibliotecas utilizadas:
-- css: Bootstrap v4.4.1
-- js: JQuery v3.6.0
+- CSS: Bootstrap v4.4.1
+- JS: JQuery v3.6.0
