@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="asserts/images/Vector.png" type="image/x-icon">
+	<title>Orange Share - Cadastro</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body class="bodyCadastro">
+	<div class="lateral">
+		<img src="asserts/images/orange-share-logo.png" alt="image pocket" class="image-fluid img-cadastro" >
+		<img src="asserts/images/image-cadastro.png" alt="image pocket" class="image-fluid img-cadastro" >
+	</div>
+	<div class="formCadastro" class="form-group">
+		<a href="index.html" class="linkVoltar"><i class="fa fa-arrow-left"></i>Voltar</a><br><hr>
+		<label class="cadTitulo">Seja bem vindo à Orange Share</label><br>
+		<label class="cadSubTitulo">Aprenda e cresca com a ajuda de mentores.</label><br><br>
+		<input type="text" id="usuarioNome" class="form-control" placeholder="* Nome"><br>
+		<input type="text" id="usuarioEmail" class="form-control" placeholder="* Email"><br>
+		<input type="password" id="usuarioSenha" class="form-control" placeholder="* Senha" value=""><br>
+		<input type="password" id="usuarioSenhaConfirm" class="form-control" placeholder="* Confirmação de senha" value=""><br>
+		<input type="text" id="usuarioFoto" class="form-control" placeholder="Foto: insira o usuário do github"><br>
+
+		<input type="checkbox" id="usuarioTipo">
+		<label style="font-size: 12px;" >Quero ser Mentor!</label><br><br>
+
+		<div id="especialidades" style="display:none;">
+			<label style="font-size: 12px;" >Os cadastro de mentores passam por uma avaliação.</label><br>
+			<input type="text" id="usuarioEspecialidades" class="form-control" placeholder="Especialidades">             
+			<label style="font-size: 12px;" >Insira as especialidades separadas por vírgula.</label><br><br> 
+		</div>        
+		
+		<button type="button" id="btnInserir" class="btn btn-primary">Concluir</button><br>
+		<hr>
+		<label style="font-size: 15px;" >Já é cadastrado? <a href="login.html">Clique aqui</a> para acessar.</label><br><br>
+	</div>
+</body>
+</html>
+<script>
+	$(document).ready(function(){
+		let $usuarioNome, $usuarioEmail, $usuarioSenha, $usuarioSenhaConfirm, $usuarioFoto, $usuarioEspecialidades;
+
+		$('#usuarioTipo').prop('checked',false)
+
+		$('#usuarioTipo').click(function(){
+			$('#especialidades').toggle(300);			
+		})
+
+		$('#btnInserir').click(function(){		
+
+			$usuarioNome = $('#usuarioNome').val()
+			$usuarioEmail = $('#usuarioEmail').val()
+			$usuarioSenha = $('#usuarioSenha').val()
+			$usuarioSenhaConfirm = $('#usuarioSenhaConfirm').val()
+			$usuarioFoto = $('#usuarioFoto').val()
+			$usuarioEspecialidades = $('#usuarioEspecialidades').val() 
+			$usuarioTipo = $('#usuarioTipo')      
+			
+			let usuario_dados = new Array();
+			
+			usuario_dados = JSON.parse(localStorage.getItem('usuarios')) 
+			? JSON.parse(localStorage.getItem('usuarios'))
+			: [];
+
+			if($usuarioNome == '' || $usuarioEmail == '' || $usuarioSenha == '' || $usuarioSenhaConfirm == ''){
+				alert('Verifique os campos em branco');
+				return;
+			} else if (usuario_dados.some((v) =>{return v.email == $usuarioEmail})){				
+				$($('#usuarioEmail')).get(0).setCustomValidity('Email já cadastrado.');
+				$($('#usuarioEmail')).get(0).reportValidity();
+			} else {
+				if($usuarioTipo.is(':checked') && $usuarioEspecialidades != ''){
+					usuario_dados.push({
+						nome:$usuarioNome,
+						email:$usuarioEmail,
+						senha:$usuarioSenha,
+						foto:`https://github.com/${$usuarioFoto}.png`,
+						especialidades:$usuarioEspecialidades.split(','),
+						tipo: 'mentor'
+					});				
+				} else {
+					usuario_dados.push({
+						nome:$usuarioNome,
+						email:$usuarioEmail,
+						senha:$usuarioSenha,
+						foto:`https://github.com/${$usuarioFoto}.png`,
+					});
+				};
+				localStorage.setItem('usuarios', JSON.stringify(usuario_dados));
+				alert('Usuário cadastrado com sucesso!')
+				$('input').each(function(){
+					$(this).val('')
+				})
+				window.location.href="login.html"
+			};			
+		});
+
+		$('#usuarioSenhaConfirm').blur(function(){
+			if($('#usuarioSenha').val() !== $(this).val()){
+				$(this).get(0).setCustomValidity('Senhas não são iguais');
+				$(this).get(0).reportValidity();
+				$($('#usuarioSenha')).css('border','solid red')
+				$(this).css('border','solid red')
+				return false;
+			} else {
+				$(this).get(0).setCustomValidity('');
+				$($('#usuarioSenha')).css('border','solid green')
+				$(this).css('border','solid green')
+				return true;
+			}
+		});
+	});
+</script>
