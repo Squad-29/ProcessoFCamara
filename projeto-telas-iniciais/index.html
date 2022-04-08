@@ -6,37 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página inicial</title>
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="styleMenu.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+	<script>
+		$( function() {
+			$( "#datepicker" ).datepicker();
+		} );
+	</script>
 </head>
 <body>
-	<nav id="navbar">
-		<a href="#" class="logo"><img src="asserts/images/orange-share-logo.png" width="100px"></a>
+	<div id="navbar">
+		<a href="index.html" class="logo"><img src="asserts/images/orange-share-logo.png" width="150px"></a>
 		<div class="menu">
-			<p id="home" class="itemMenu">HOME</p>		
-			<p id="cadastro" class="itemMenu">CADASTRO</p>		
-			<p id="mentores" class="itemMenu">MENTORES</p>		
-			<select id="lista">
-			</select>
+			<p id="home" class="itemMenu">HOME</p>
+			<p id="mentores" class="itemMenu">MENTORES</p>				
+			<p id="mentores" class="itemMenu">FAQ</p>				
 		</div>
 		
-		
-		<a href="cadastro.html">REGISTRAR</a>
-		<a href="login.html">LOGIN</a>
+		<div class="regLog">
+			<a href="cadastro.html">REGISTRAR</a>
+			<a href="login.html">LOGIN</a>
+		</div>		
 
-		<div class="infoUsuario"></div>
-		
+		<div class="infoUsuario"></div>		
 	</div>
-	<div class="content">
-		<div ></div>
+
+	<div id="busca">
+		<input type="text" placeholder="Pesquisa por nome" class="">
+		<select id="lista">
+		</select>
+		<select id="">
+			<option value="">Habilidade</option>
+		</select>
+		<input type="text" id="datepicker" placeholder="Disponibilidade">
+	</div>
+
+	<div class="content">		
 		<div id="resultado"></div>		
 		<div id="main">
 			<div id="info"></div>
 		</div>
-		<div class="chat"></div>
+		<div class="chatScreen"></div>
+		<div class="chat"><i class="fa fa-comment-captions"></i></div>
 	</div>	
+
 </body>
 <script src="script.js"></script>	
+<script>
+	$(document).ready( function(){
+		$('#busca').hide()
+		var usuario = sessionStorage.nome
+
+		if (sessionStorage.nome == undefined){
+			$('#home').hide()
+			$(".infoUsuario").hide()
+		} else {
+			$(".regLog").hide()
+			$('#home').show()
+		}
+	})
+	
+</script>
 </html>

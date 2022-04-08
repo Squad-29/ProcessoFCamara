@@ -16,8 +16,8 @@ elemento.addEventListener('change', altera);
 //btnInserir.addEventListener('click', inserir);
 
 addCat();
-exibeInfo(0);
 
+//! FUNÇÃO DESATIVADA - IRÁ SE ALTERADA
 // FUNÇÃO QUE INSERE UM NOVO MENTOR
 function inserir(){
     elemento.innerHTML = ''    
@@ -52,7 +52,7 @@ function altera(){
 
 // FUNÇÃO QUE ATUALIZA O SELECT COM AS CATEGORIAS
 function updateLista(){
-    let opZero = `<option value='0'>-----</option>`
+    let opZero = `<option value='0'>- Área -</option>`
     let opcoes = ''
     for (let cat in categorias){
         opcoes += `<option value='${categorias[cat]}'>${categorias[cat]}</option>`
@@ -82,23 +82,53 @@ function exibeInfo(op){
         } else if (op == '0'){            
             divMentor.innerHTML = pessoas[p].nome + " - " + pessoas[p].especialidade + '<br>' + imagemMentor;
             divInfo.appendChild(divMentor);
-        };
-               
+        };               
     };
 };
 
-$('#navbar p#home').click(function(){
+$(document).ready( function(){
+    $('#busca').hide()
+    var usuario = sessionStorage.nome
 
-});
+    if (sessionStorage.nome == undefined){
+        $('#home').hide()
+        $(".infoUsuario").hide()
+    } else {
+        $(".regLog").hide()
+        $('#home').show()
+    }
 
-$('#navbar p#mentores').click(function(){
-    divInfo.innerHTML = ''
-    exibeInfo(0);
-});
+    $('#navbar p#home').click(function(){
+        $('#info').load('home.html');
+        $('#busca').hide()
+    });
+    
+    $('#navbar p#mentores').click(function(){
+        divInfo.innerHTML = ''
+        exibeInfo(0);
+        $('#busca').show()
+    });
+    
+    $('#navbar p#faq').click(function(){
+        $('#info').load('faq.html');
+    });
+    
+    //$('.infoUsuario').html(`Bem vindo ${sessionStorage.nome}`);
+    $('.infoUsuario').html(function(){
+        $(this).append(`<p>Bem vindo ${sessionStorage.nome}</p>`)
+       // $(this).append(`<img src='${localStorage.foto}'>`)
+        $(this).append('<i class="sair fa-solid fa-arrow-right-from-bracket"></i>')
+    });
+    
+    $('.sair').click(function(){
+        sessionStorage.removeItem('nome')
+        window.location.reload('index.html')
+    });
+    
+    $('.chat').click(function(){
+        $('.chatScreen').toggle(200)
+    })
+})
 
-$('#navbar p#cadastro').click(function(){
-    $('#info').load('cadastro.html');
-});
 
-$('.infoUsuario').html(`Bem vindo ${sessionStorage.nome}`);
 

@@ -1,0 +1,93 @@
+a:link:hover, a:visited:hover{
+    text-decoration: none;
+    font-weight: bold;
+    color:rgb(254, 68, 0);
+}
+
+
+/*  STYLE CADASTRO e LOGIN  */
+.bodyCadastro{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Futura Lt BT', sans-serif;
+}
+
+.lateral{
+    background-color: rgb(254, 68, 0);
+    width: 60%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:rgb(235, 235, 235);
+    padding: 0;
+    margin: 0;
+}
+
+.formCadastro, .formLogin{
+    width: 40%;
+    height: 100vh;
+    margin: auto 80px auto 80px; 
+    padding-top: 30px;  
+}
+
+.img-cadastro{
+    width: 300px;
+    transition: all .5s ease-in-out;
+}
+
+.linkVoltar{
+    color: #000;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.cadTitulo{
+    font-weight: 400;
+}
+.cadSubTitulo{
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.input-form{
+    margin-bottom: 20px;
+}
+
+/*  RESPONSIVIDADE */
+@media (max-width:800px) {
+    .img-cadastro{
+        width: 200px;
+    }
+}
+
+@media (max-width:600px) {
+    .bodyCadastro{
+        flex-direction: column;
+    }
+
+    .lateral{
+        width: 100vw;
+        height: 30vh;
+    }
+
+    .img-cadastro{
+        width: 150px;
+    }
+
+    .text_login{
+        display: none;
+    }
+
+    .formCadastro{
+        width: 100vw;
+        padding: 50px 30px 50px 30px;
+    }
+}

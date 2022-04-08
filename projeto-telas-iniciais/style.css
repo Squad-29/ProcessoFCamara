@@ -1,27 +1,37 @@
-@import url('http://fonts.cdnfonts.com/css/futura-pt?styles=117663,117668,117666');
 
-@import url('http://fonts.cdnfonts.com/css/mostin');
+@import url('http://fonts.cdnfonts.com/css/lato?styles=17388,17383,17386,17381,17379');
+/*  HEADING: font-family: 'Lato', sans-serif;*/
 
-body{    
-    margin: 0;
-    padding: 0;
+@import url('http://fonts.cdnfonts.com/css/montserrat?styles=17402,17405,17395,17398,17400,17403,17391,17393,17389');
+/*  BODY: font-family: 'Montserrat', sans-serif;*/
+
+                
+
+body{   
     display: flex;
     flex-direction: column;
 }
 
-.content{
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    align-items: stretch;
+::placeholder {
+    font-size: 10px;
 }
 
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lato', sans-serif; 
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*PAGINA INICIAL--------------------------------------*/
+/*MENU SUPERIOR*/
 #navbar{
     position: fixed;
     display: flex;
     width: 100vw;  
     background: rgb(254, 68, 0);
-    height: 50px;
+    height: 60px;
     justify-content: center;
     align-items: center;
     border-right:2px solid rgb(43, 43, 43) ;   
@@ -32,35 +42,112 @@ body{
     margin-left:50px ;
 }
 
+.logo{
+    position: absolute;
+    left:20px;
+    padding: 0px;
+}
+
 .menu{
     width: 300px;
     display: flex;
+    position: absolute;
+    left: 250px;
 }
 
 .itemMenu{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(235, 235, 235);
+    color: rgb(223, 223, 223);
     padding: 15px 5px 0px 5px;
     transition: all .3s ease-in-out;
-    font-size: small;
+    font-size: 14px;    
+    font-weight: 600;
 }
 
 .itemMenu:hover{
-    transform: scale(1.1);
     color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.regLog a:link, a:visited{
+    margin-left: 15px;
+    background-color: aliceblue;
+    border-radius:5px ;
+    font-size: 12px;
+    padding: 5px 10px;
+    font-weight: 400;
+    color:rgb(254, 68, 0);
+    vertical-align: middle;
     cursor: pointer;
 }
 
-.cadastro, .alteracao{
-    margin-left: 50px;
+.regLog a:hover{
+    text-decoration: none;
+    color:rgb(254, 68, 0) ;
+    background-color:rgb(255, 228, 218);
 }
 
-::placeholder {
-    font-size: 13px;
+.infoUsuario, .regLog{
+    position:absolute;
+    display: flex;
+    width:200px;
+    height:30px;
+    right:15px;
+    padding-right: 10px;
+    color: #fff;
+}
+.infoUsuario i:hover{
+    cursor: pointer;
+}
+
+/*  BUSCA   */
+#busca{
+    position: relative;
+    top: 60px;
+    width: 100vw;
+    height: 80px;
+}
+
+
+/*  CONTEÚDO    */
+.content{
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: stretch;
+}
+
+.chat{
+    background-color: green;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    box-shadow: 0px 1px 6px #888;
+    transition: all .2s;
+}
+
+.chat:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.chatScreen{
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 50px;
+    width: 200px;
+    height: 300px;
+    box-shadow: 1px 1px 6px rgb(0, 0, 0);
+    background: #888;
+    border-radius: 5px;
 }
 
 #main{
-    background-color: azure;
     width: 100vw;
     height: 100vh;
 }
@@ -86,8 +173,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all .2s ease-in-out;
-  
+    transition: all .2s ease-in-out;  
 }
 
 #divMentor:hover{
@@ -95,6 +181,8 @@ body{
     cursor: pointer;
 }
 
+
+/*  RESPONSIVIDADE  */
 @media (max-width: 1000px) {
     #navbar input{
         width: 40px;
@@ -111,112 +199,5 @@ body{
     }         
 }
 
-/*  STYLE CADASTRO e LOGIN  */
-.bodyCadastro{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    font-family: 'Futura Lt BT', sans-serif;
-}
 
-.lateral{
-    background-color: rgb(254, 68, 0);
-    width: 60vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color:rgb(235, 235, 235);
-}
-
-.formCadastro{
-    width: 40vw;
-    margin: auto 80px auto 80px;    
-}
-
-.img-cadastro{
-    width: 300px;
-    transition: all .5s ease-in-out;
-}
-
-.linkVoltar{
-    color: #000;
-}
-
-.linkVoltar:link{
-    text-decoration: none;
-}
-
-.cadTitulo{
-    font-size: 30px;
-    font-weight: 500;
-}
-
-@media (max-width:800px) {
-    .img-cadastro{
-        width: 200px;
-    }
-}
-
-@media (max-width:600px) {
-    .bodyCadastro{
-        flex-direction: column;
-    }
-
-    .lateral{
-        width: 100vw;
-        height: 30vh;
-    }
-
-    .img-cadastro{
-        width: 150px;
-    }
-
-    .text_login{
-        display: none;
-    }
-
-    .formCadastro{
-        width: 100vw;
-        padding: 50px 30px 50px 30px;
-    }
-}
-
-/*PAGINA INICIAL*/
-.logo{
-    position: absolute;
-    left:20px;
-    padding: 0px;
-}
-
-.infoUsuario{
-    position:absolute;
-    width:200px;
-    height:30px;
-    right:15px;
-    text-align:right;
-    padding-right: 10px;
-    color: #fff;
-}
-
-.chat{
-    background-color: green;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    box-shadow: 0px 1px 6px #888;
-    transition: all .2s;
-}
-
-.chat:hover{
-    cursor: pointer;
-    transform: scale(1.05);
-}
 

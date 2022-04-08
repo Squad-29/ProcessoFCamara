@@ -4,6 +4,7 @@
 	<link rel="shortcut icon" href="asserts/images/Vector.png" type="image/x-icon">
 	<title>Orange Share - Cadastro</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="styleLoginCadastro.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -15,24 +16,24 @@
 	</div>
 	<div class="formCadastro" class="form-group">
 		<a href="index.html" class="linkVoltar"><i class="fa fa-arrow-left"></i>Voltar</a><br><hr>
-		<label class="cadTitulo">Seja bem vindo à Orange Share</label><br>
-		<label class="cadSubTitulo">Aprenda e cresca com a ajuda de mentores.</label><br><br>
-		<input type="text" id="usuarioNome" class="form-control" placeholder="* Nome"><br>
-		<input type="text" id="usuarioEmail" class="form-control" placeholder="* Email"><br>
-		<input type="password" id="usuarioSenha" class="form-control" placeholder="* Senha" value=""><br>
-		<input type="password" id="usuarioSenhaConfirm" class="form-control" placeholder="* Confirmação de senha" value=""><br>
-		<input type="text" id="usuarioFoto" class="form-control" placeholder="Foto: insira o usuário do github"><br>
-
-		<input type="checkbox" id="usuarioTipo">
-		<label style="font-size: 12px;" >Quero ser Mentor!</label><br><br>
-
-		<div id="especialidades" style="display:none;">
-			<label style="font-size: 12px;" >Os cadastro de mentores passam por uma avaliação.</label><br>
-			<input type="text" id="usuarioEspecialidades" class="form-control" placeholder="Especialidades">             
-			<label style="font-size: 12px;" >Insira as especialidades separadas por vírgula.</label><br><br> 
-		</div>        
-		
-		<button type="button" id="btnInserir" class="btn btn-primary">Concluir</button><br>
+		<form>
+			<h4 class="cadTitulo">Seja bem vindo à Orange Share</h4>
+			<h6 class="cadSubTitulo">Aprenda e cresca com a ajuda de mentores.</h6>
+			
+			<input type="text" id="usuarioNome" class="form-control input-form" placeholder="* Nome">
+			<input type="text" id="usuarioEmail" class="form-control input-form" placeholder="* Email">
+			<input type="password" id="usuarioSenha" class="form-control input-form" placeholder="* Senha" value="">
+			<input type="password" id="usuarioSenhaConfirm" class="form-control input-form" placeholder="* Confirmação de senha" value="">
+			<input type="text" id="usuarioFoto" class="form-control input-form" placeholder="Foto: insira o usuário do github">
+			<input type="checkbox" id="usuarioTipo">
+			<label class="lblCheckbox" style="font-size: 12px;" >Quero ser Mentor!</label><br><br>
+			<div id="especialidades" style="display:none;">
+				<label style="font-size: 12px;" >Os cadastro de mentores passam por uma avaliação.</label><br>
+				<input type="text" id="usuarioEspecialidades" class="form-control" placeholder="Especialidades">             
+				<label style="font-size: 12px;" >Insira as especialidades separadas por vírgula.</label><br><br> 
+			</div>
+			<button type="submit" id="btnInserir" class="btn btn-primary">Concluir</button><br>
+		</form>		
 		<hr>
 		<label style="font-size: 15px;" >Já é cadastrado? <a href="login.html">Clique aqui</a> para acessar.</label><br><br>
 	</div>
