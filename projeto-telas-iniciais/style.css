@@ -33,8 +33,7 @@ h1, h2, h3, h4, h5, h6{
     background: rgb(254, 68, 0);
     height: 60px;
     justify-content: center;
-    align-items: center;
-    border-right:2px solid rgb(43, 43, 43) ;   
+    align-items: center; 
     z-index: 500; 
 }
 
@@ -71,30 +70,36 @@ h1, h2, h3, h4, h5, h6{
 
 .regLog a:link, a:visited{
     margin-left: 15px;
-    background-color: aliceblue;
+   /*  background-color: white; */
     border-radius:5px ;
     font-size: 12px;
-    padding: 5px 10px;
+    padding: 8px 20px;
     font-weight: 400;
-    color:rgb(254, 68, 0);
+    color:white;
     vertical-align: middle;
     cursor: pointer;
+    border: 0.1em solid white;
+    font-weight: 500;
 }
 
 .regLog a:hover{
     text-decoration: none;
     color:rgb(254, 68, 0) ;
-    background-color:rgb(255, 228, 218);
+    background-color:rgb(255, 255, 255);
+}
+
+.infoUsuario{
+    font-size: 13px;
 }
 
 .infoUsuario, .regLog{
     position:absolute;
     display: flex;
     width:200px;
-    height:30px;
+    height:35px;
     right:15px;
-    padding-right: 10px;
     color: #fff;
+    margin-right: 20px;
 }
 .infoUsuario i:hover{
     cursor: pointer;
@@ -153,7 +158,8 @@ h1, h2, h3, h4, h5, h6{
 }
 
 #info{
-    padding-top: 100px;
+    margin-top: 50px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;

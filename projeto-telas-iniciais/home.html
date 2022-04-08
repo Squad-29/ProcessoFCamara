@@ -7,9 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <div style="position:fixed;width:250px; height: 100vh; border-right:2px solid #555;z-index:-100;left: 0px;top: 60px;">
+    <div style="position:fixed;width:250px; height: 100vh; border-right:2px solid #555;left: 0px;top: 60px;padding: 20px;">
     
-        <p> dados do usuario</p>
+        <div id="infoHome" style="display: flex;vertical-align: middle;"></div>
     </div>
 </body>
+<script>
+    
+    $('#infoHome').html(function(){
+        $(this).append(`<img src='${sessionStorage.foto}' width='60px' style='border-radius:100%;'>`)
+        $(this).append(`<p style='margin-left:10px;cursor:pointer;'>${sessionStorage.nome}</p>`)
+    })
+</script>
 </html>

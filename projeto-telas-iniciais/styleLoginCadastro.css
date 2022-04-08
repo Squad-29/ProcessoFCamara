@@ -58,6 +58,8 @@ a:link{
 }
 
 .input-form{
+    padding:16px, 24px, 16px, 24px;
+    height: 56px;
     margin-bottom: 20px;
 }
 

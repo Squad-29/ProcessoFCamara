@@ -88,7 +88,10 @@ function exibeInfo(op){
 
 $(document).ready( function(){
     $('#busca').hide()
-    var usuario = sessionStorage.nome
+
+    $(function(){
+        $("#datepicker").datepicker({ minDate: -0, maxDate: "+1M" });;
+    });
 
     if (sessionStorage.nome == undefined){
         $('#home').hide()
@@ -96,10 +99,11 @@ $(document).ready( function(){
     } else {
         $(".regLog").hide()
         $('#home').show()
+        $('#info').load('home.html')
     }
 
     $('#navbar p#home').click(function(){
-        $('#info').load('home.html');
+        $('#info').load('home.html');        
         $('#busca').hide()
     });
     

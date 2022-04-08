@@ -68,7 +68,7 @@
 				let current_user = user_records.filter((v) => { return v.email == $usuarioEmail && v.senha == $usuarioSenha})[0]
 				
 				sessionStorage.setItem('nome',current_user.nome)
-				//localStorage.setItem('email',current_user.email)
+				sessionStorage.setItem('foto',current_user.foto)
 				window.location.href="index.html"
 
 			} else {
