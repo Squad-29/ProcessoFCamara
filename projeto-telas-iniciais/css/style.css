@@ -1,0 +1,215 @@
+@import url('http://fonts.cdnfonts.com/css/lato?styles=17388,17383,17386,17381,17379');
+/*  HEADING: font-family: 'Lato', sans-serif;*/
+
+@import url('http://fonts.cdnfonts.com/css/montserrat?styles=17402,17405,17395,17398,17400,17403,17391,17393,17389');
+/*  BODY: font-family: 'Montserrat', sans-serif;*/
+
+body{   
+    display: flex;
+    flex-direction: column;
+}
+
+::placeholder {
+    font-size: 10px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lato', sans-serif; 
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*PAGINA INICIAL--------------------------------------*/
+/*MENU SUPERIOR*/
+.navbar{
+    background: rgb(254, 68, 0);
+}
+
+.regLog a:hover{
+    text-decoration: none;
+    color:rgb(254, 68, 0) ;
+    background-color:rgb(255, 255, 255);
+}
+
+.infoUsuario{
+    font-size: 13px;
+}
+
+.infoUsuario{
+    position:absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    padding: 10px;
+    width:200px;
+    height:50px;
+    right:15px;
+    color: #fff;
+    margin-right: 20px;
+    border: 1px black solid;
+
+}
+.infoUsuario p{    
+    margin: 10px;
+}
+.infoUsuario i:hover{
+    cursor: pointer;
+}
+
+/*  BUSCA   */
+#busca{
+    position: relative;
+    justify-content: center;
+    top: 60px;
+    width: 100vw;
+    height: 80px;
+}
+
+/*  CONTEÚDO    */
+.content{
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: stretch;
+}
+
+.chat{
+    background-color: green;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    box-shadow: 0px 1px 6px #888;
+    transition: all .2s;
+}
+
+.chat:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.chatScreen{
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 50px;
+    width: 200px;
+    height: 300px;
+    box-shadow: 1px 1px 6px rgb(0, 0, 0);
+    background: #888;
+    border-radius: 5px;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+#info{
+    position: relative;
+    right: 0px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.divMentor{
+    position: relative;
+    background-color: #C4C4C4; 
+    border-radius: 16px;
+    
+    min-width: 256px; 
+    min-height: 336px; 
+    margin-bottom:20px;
+    margin-right: 39px; 
+    font-size:15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease-in-out;  
+}
+
+.mentorImg{
+    position: absolute;
+    top:32px;
+    width: 157px;
+    border-radius: 100%;
+}
+
+.mentorNome{
+    position: absolute;
+    top:205px;
+    left: 16px;
+    color: black;
+    font-size: 20px;
+}
+
+.mentorEmail{
+    position: absolute;
+    font-size: 14px;
+    top:241px;
+    left: 16px;
+}
+
+.mentorEsp{
+    position: absolute;
+
+    top: 278px;
+    left: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.itemEspc{
+    display: inline;
+    background-color: #E9E9E9;
+    width: 80px;
+    height: 31px;
+    border-radius: 4px;
+    margin-right: 8px;
+    font-size: 12px;
+    padding: 6px 8px;
+}
+
+.divMentor:hover{
+    cursor: pointer;
+}
+
+
+/*  RESPONSIVIDADE  */
+@media (max-width: 1000px) {
+    #navbar input{
+        width: 40px;
+    }   
+}
+
+@media (max-width:600px) {
+    #info{
+        flex-direction: column;
+    } 
+    
+    #divMentor{
+        padding: 0;
+    }         
+}
+
+@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
+@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
+@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
+
+

@@ -9,13 +9,16 @@
 <body>
     <div style="position:fixed;width:250px; height: 100vh; border-right:2px solid #555;left: 0px;top: 60px;padding: 20px;">
     
-        <div id="infoHome" style="display: flex;vertical-align: middle;"></div>
+        <div id="infoHome" style="display: flex; flex-direction:column;align-items: center;"></div>
+        <a href="">item do menu 1</a><br>
+        <a href="">item do menu 2</a><br>
+        <a href="">item do menu 3</a><br>
+        <a href="">item do menu 4</a><br>
     </div>
 </body>
-<script>
-    
+<script>    
     $('#infoHome').html(function(){
-        $(this).append(`<img src='${sessionStorage.foto}' width='60px' style='border-radius:100%;'>`)
+        $(this).append(`<img src='${sessionStorage.foto}' width='150px' style='border-radius:100%;'>`)
         $(this).append(`<p style='margin-left:10px;cursor:pointer;'>${sessionStorage.nome}</p>`)
     })
 </script>

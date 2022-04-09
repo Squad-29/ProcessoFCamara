@@ -3,8 +3,8 @@
 <head>
 	<link rel="shortcut icon" href="asserts/images/Vector.png" type="image/x-icon">
 	<title>Orange Share - Cadastro</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="styleLoginCadastro.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/styleLoginCadastro.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -39,78 +39,4 @@
 	</div>
 </body>
 </html>
-<script>
-	$(document).ready(function(){
-		let $usuarioNome, $usuarioEmail, $usuarioSenha, $usuarioSenhaConfirm, $usuarioFoto, $usuarioEspecialidades;
-
-		$('#usuarioTipo').prop('checked',false)
-
-		$('#usuarioTipo').click(function(){
-			$('#especialidades').toggle(300);			
-		})
-
-		$('#btnInserir').click(function(){		
-
-			$usuarioNome = $('#usuarioNome').val()
-			$usuarioEmail = $('#usuarioEmail').val()
-			$usuarioSenha = $('#usuarioSenha').val()
-			$usuarioSenhaConfirm = $('#usuarioSenhaConfirm').val()
-			$usuarioFoto = $('#usuarioFoto').val()
-			$usuarioEspecialidades = $('#usuarioEspecialidades').val() 
-			$usuarioTipo = $('#usuarioTipo')      
-			
-			let usuario_dados = new Array();
-			
-			usuario_dados = JSON.parse(localStorage.getItem('usuarios')) 
-			? JSON.parse(localStorage.getItem('usuarios'))
-			: [];
-
-			if($usuarioNome == '' || $usuarioEmail == '' || $usuarioSenha == '' || $usuarioSenhaConfirm == ''){
-				alert('Verifique os campos em branco');
-				return;
-			} else if (usuario_dados.some((v) =>{return v.email == $usuarioEmail})){				
-				$($('#usuarioEmail')).get(0).setCustomValidity('Email já cadastrado.');
-				$($('#usuarioEmail')).get(0).reportValidity();
-			} else {
-				if($usuarioTipo.is(':checked') && $usuarioEspecialidades != ''){
-					usuario_dados.push({
-						nome:$usuarioNome,
-						email:$usuarioEmail,
-						senha:$usuarioSenha,
-						foto:`https://github.com/${$usuarioFoto}.png`,
-						especialidades:$usuarioEspecialidades.split(','),
-						tipo: 'mentor'
-					});				
-				} else {
-					usuario_dados.push({
-						nome:$usuarioNome,
-						email:$usuarioEmail,
-						senha:$usuarioSenha,
-						foto:`https://github.com/${$usuarioFoto}.png`,
-					});
-				};
-				localStorage.setItem('usuarios', JSON.stringify(usuario_dados));
-				alert('Usuário cadastrado com sucesso!')
-				$('input').each(function(){
-					$(this).val('')
-				})
-				window.location.href="login.html"
-			};			
-		});
-
-		$('#usuarioSenhaConfirm').blur(function(){
-			if($('#usuarioSenha').val() !== $(this).val()){
-				$(this).get(0).setCustomValidity('Senhas não são iguais');
-				$(this).get(0).reportValidity();
-				$($('#usuarioSenha')).css('border','solid red')
-				$(this).css('border','solid red')
-				return false;
-			} else {
-				$(this).get(0).setCustomValidity('');
-				$($('#usuarioSenha')).css('border','solid green')
-				$(this).css('border','solid green')
-				return true;
-			}
-		});
-	});
-</script>
+<script src="js/cadastro.js"></script>

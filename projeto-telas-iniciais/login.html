@@ -3,8 +3,8 @@
 <head>
 	<link rel="shortcut icon" href="asserts/images/Vector.png" type="image/x-icon">
 	<title>Orange Share - Cadastro</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="styleLoginCadastro.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/styleLoginCadastro.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -33,48 +33,4 @@
 	</div>
 </body>
 </html>
-<script>
-	// MOSTRAR SENHA
-	$(document).ready(function(){
-		$('#mostrarSenha').mouseenter(function(){
-			$(this).css('cursor','pointer');			
-
-			$(this).click(function(){
-				let campoSenha = $('#usuarioSenha')
-				let campoSenhaTipo = $('#usuarioSenha').attr('type')
-
-				if (campoSenhaTipo == 'password'){
-					campoSenha.attr('type','text')
-				} else {
-					campoSenha.attr('type','password')
-				}
-			});			
-		})
-
-		// LOGIN DO USUÁRIO
-		$('#btnEntrar').click(function(){
-			let $usuarioEmail, $usuarioSenha;
-
-			$usuarioEmail = $('#usuarioEmail').val()
-			$usuarioSenha = $('#usuarioSenha').val()
-
-			let user_records = new Array();
-
-			user_records = JSON.parse(localStorage.getItem('usuarios')) ? JSON.parse(localStorage.getItem('usuarios')) : []
-
-			if(user_records.some((v) => { return v.email == $usuarioEmail && v.senha == $usuarioSenha})){
-				alert('login pass')
-
-				let current_user = user_records.filter((v) => { return v.email == $usuarioEmail && v.senha == $usuarioSenha})[0]
-				
-				sessionStorage.setItem('nome',current_user.nome)
-				sessionStorage.setItem('foto',current_user.foto)
-				window.location.href="index.html"
-
-			} else {
-				alert('Usuário ou senha inválidos!')
-			}
-		});
-	});
-
-</script>
+<script src="js/login.js"></script>
