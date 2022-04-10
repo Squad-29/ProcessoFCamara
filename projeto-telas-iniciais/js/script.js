@@ -55,6 +55,7 @@ $(document).ready( function(){
     $('.btnLogin').click(function(){
         window.location ='login.html'
     });
+    
 })
 
 
