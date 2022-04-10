@@ -2,6 +2,7 @@
     {   
         "id" : 1,
         "nome" : "Ítalo Gabriel",
+        "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at risus purus. Pellentesque ut vulputate augue. Phasellus placerat lectus ornare ligula aliquam, nec dignissim orci ullamcorper. Nullam rutrum vitae neque sit amet congue. Suspendisse potenti.",
         "email" : "italogabriel0@oshare.com",
         "cargo" : "Scrum Master",
         "espec" : ["Organização", "Empatia"],
@@ -11,6 +12,7 @@
     {   
         "id" : 2,
         "nome" : "Flávia Yoshida",
+        "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at risus purus. Pellentesque ut vulputate augue. Phasellus placerat lectus ornare ligula aliquam, nec dignissim orci ullamcorper. Nullam rutrum vitae neque sit amet congue. Suspendisse potenti.",
         "email" : "flaviayoshida@oshare.com",
         "cargo" : "Desenvolvedora Web",
         "espec" : ["Frontend", "React", "Bootstrap"],
@@ -20,6 +22,7 @@
     {   
         "id" : 3,
         "nome" : "Maria Cristina",
+        "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at risus purus. Pellentesque ut vulputate augue. Phasellus placerat lectus ornare ligula aliquam, nec dignissim orci ullamcorper. Nullam rutrum vitae neque sit amet congue. Suspendisse potenti.",
         "email" : "mariacristina@oshare.com",
         "cargo" : "UX Designer",
         "espec" : ["Research", "Design Systems"] ,
@@ -29,6 +32,7 @@
     {   
         "id" : 4,
         "nome" : "Aída Jessica",
+        "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at risus purus. Pellentesque ut vulputate augue. Phasellus placerat lectus ornare ligula aliquam, nec dignissim orci ullamcorper. Nullam rutrum vitae neque sit amet congue. Suspendisse potenti.",
         "email" : "aidajessica@oshare.com",
         "cargo" : "Scrum Master",
         "espec" : ["Comunicação", "Liderança"],
@@ -38,6 +42,7 @@
     {   
         "id" : 5,
         "nome" : "Matias Conrado",
+        "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at risus purus. Pellentesque ut vulputate augue. Phasellus placerat lectus ornare ligula aliquam, nec dignissim orci ullamcorper. Nullam rutrum vitae neque sit amet congue. Suspendisse potenti.",
         "email" : "matiasconrado@oshare.com",
         "cargo" : "Desenvolvedor de Software",
         "espec" : ["Java", "PHP", "Python"],
@@ -47,6 +52,7 @@
     {   
         "id" : 6,
         "nome" : "José Luis Lorenzo",
+        "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at risus purus. Pellentesque ut vulputate augue. Phasellus placerat lectus ornare ligula aliquam, nec dignissim orci ullamcorper. Nullam rutrum vitae neque sit amet congue. Suspendisse potenti.",
         "email" : "joseluislorenzo@oshare.com",
         "cargo" : "Product Designer",
         "espec" : ["Análise de Dados", "Liderança"],
@@ -56,6 +62,7 @@
     {   
         "id" : 7,
         "nome" : "Ezequiel Arnaldo",
+        "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at risus purus. Pellentesque ut vulputate augue. Phasellus placerat lectus ornare ligula aliquam, nec dignissim orci ullamcorper. Nullam rutrum vitae neque sit amet congue. Suspendisse potenti.",
         "email" : "ezequielarnaldo@oshare.com",
         "cargo" : "UX Designer",
         "espec" : ["Usabilidade", "UI"],
@@ -65,6 +72,7 @@
     {   
         "id" : 8,
         "nome" : "Roberto Sérgio",
+        "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at risus purus. Pellentesque ut vulputate augue. Phasellus placerat lectus ornare ligula aliquam, nec dignissim orci ullamcorper. Nullam rutrum vitae neque sit amet congue. Suspendisse potenti.",
         "email" : "robertosergio@oshare.com",
         "cargo" : "Desenvolvedor Web",
         "espec" : ["Javascript", "Angular.JS"],
@@ -74,6 +82,7 @@
     {   
         "id" : 9,
         "nome" : "Ana Maria Zaira",
+        "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at risus purus. Pellentesque ut vulputate augue. Phasellus placerat lectus ornare ligula aliquam, nec dignissim orci ullamcorper. Nullam rutrum vitae neque sit amet congue. Suspendisse potenti.",
         "email" : "anamariazaira@oshare.com",
         "cargo" : "Scrum Master",
         "espec" : ["Solução de problemas complexos"],
@@ -83,6 +92,7 @@
     {   
         "id" : 10,
         "nome" : "Estela Yamila",
+        "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at risus purus. Pellentesque ut vulputate augue. Phasellus placerat lectus ornare ligula aliquam, nec dignissim orci ullamcorper. Nullam rutrum vitae neque sit amet congue. Suspendisse potenti.",
         "email" : "estelayamila@oshare.com",
         "cargo" : "Product Designer",
         "espec" : ["Gestão de processos", "IA"],
@@ -92,6 +102,7 @@
     {   
         "id" : 11,
         "nome" : "Paulo Abraão",
+        "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at risus purus. Pellentesque ut vulputate augue. Phasellus placerat lectus ornare ligula aliquam, nec dignissim orci ullamcorper. Nullam rutrum vitae neque sit amet congue. Suspendisse potenti.",
         "email" : "pauloabraao@oshare.com",
         "cargo" : "UX Designer",
         "espec" : ["UX Learn", "Testes com usuários"],
@@ -101,6 +112,7 @@
     {   
         "id" : 12,
         "nome" : "Tatiana Roimata",
+        "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at risus purus. Pellentesque ut vulputate augue. Phasellus placerat lectus ornare ligula aliquam, nec dignissim orci ullamcorper. Nullam rutrum vitae neque sit amet congue. Suspendisse potenti.",
         "email" : "tatianaroimata@oshare.com",
         "cargo" : "Scrum Master",
         "espec" : ["Comunicação", "Empatia"],

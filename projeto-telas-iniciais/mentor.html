@@ -8,11 +8,29 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<style>
+		/* #infoMentor *{border: 1px solid red;} */
+		#infoMentor{width: 800px; position: relative;top: 168px;left:280px}
+		#avatarMentor{border-radius: 100%;width: 160px;}
+		#nomeMentor{position: absolute;top:0px;left:182px;font-weight: 500;font-size: 36px;}
+		#cargoMentor{position: absolute;top:52px;left:182px;font-weight: 500;font-size:24px;color:#7E7E7E;}
+		#bioMentor{position: absolute;top:308px;width: 640px;font-weight: 300;font-size: 20px;}
+		#emailMentor{}			
+		#especMentor, #educaMentor{position: absolute;width: 447px;height: 65px;background: #C4C4C4;}
+		#especMentor{top:584px;}
+		#educaMentor{top:719px;}
+		#horarioMentor{}
+
+		#txtExp{position: absolute;top:524px;font-size: 28px;font-weight: 500;line-height: 120%;}	
+		#txtEduc{position: absolute;top:632px;font-size: 28px;font-weight: 500;line-height: 120%;}
+
+		#btnSessao{position: absolute;top:308px;left:672px;width: 448px;height: 92px;background-color: #CACACA;border-radius: 4px;display: flex;flex-direction: row;justify-content: center;align-items: center;padding: 6px 8px; cursor: pointer;font-size: 24px;font-weight: 500;}
+	</style>
 </head>
 <body>
 	<nav class="navbar fixed-top navbar-expand-lg navbar-light">
@@ -52,16 +70,24 @@
 			<button class="btn btn-secondary my-2 my-sm-0 btnLogin" type="button">Quero ser mentor</button>
 		  </form>		  
 		</div>		
-	  </nav>
-	<h3>Aqui vão as inforamações do mentor</h3>
-	<img id="avatarMentor" src="" width="150px">	
-	<h5 id="idMentor">Id: </h5>
-	<h5 id="nomeMentor"></h5>
-	<h5 id="emailMentor"></h5>
-	<h5 id="cargoMentor"></h5>
-	<h5 id="especMentor"></h5>
-	<h5 id="horarioMentor"></h5>
+	  </nav>	
+	<div id="infoMentor">
+		<img id="avatarMentor" src="">	
+<!-- 		<div id="idMentor">Id: </div> -->
+		<h4 id="nomeMentor"></h4>
+		<div id="cargoMentor"></div>
+		<div id="bioMentor"></div>
+		<div id="emailMentor"></div>
+		<h6 id="txtExp">Experiência</h6>		
+		<div id="especMentor"></div>
+		<h6 id="txtEduc">Educação</h6>
+		<div id="educaMentor"></div>
+		<div id="horarioMentor"></div>
+		<div id="btnSessao">Marcar uma sessão</div>
+	</div>
+	
 </body>
+<script src="js/script.js"></script>
 <script>
 	$(document).ready(function(){
         const urlParams = new URLSearchParams(window.location.search);
@@ -78,14 +104,13 @@
 					$("#avatarMentor").attr("src",user.avatar)
 					$("#idMentor").html(user.id)
 					$("#nomeMentor").html(user.nome)
+					$("#bioMentor").html(user.bio)
 					$("#emailMentor").html(user.email)
 					$("#cargoMentor").html(user.cargo)
 					$("#especMentor").html(user.espec)
 					$("#horarioMentor").html(user.horarios)
 				}
-            });
-
-            
+            });            
         });
     })    
 </script>
