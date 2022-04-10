@@ -4,7 +4,7 @@ $(document).ready(function(){
     $('#usuarioTipo').prop('checked',false)
 
     $('#usuarioTipo').click(function(){
-        $('#especialidades').toggle(300);			
+        $('#especialidades').toggle('slow');			
     })
 
     $('#btnInserir').click(function(){		
