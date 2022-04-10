@@ -1,25 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Orange Share</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- ARQUIVOS CSS LOCAIS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/mentor.css">
+    <!-- BIBLIOTECAS CSS (BOOTSTRAP E FONTAWESOME) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- BIBLIOTECAS JAVASCRIPT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
 </head>
 <body>
-    <div style="position:fixed;width:250px; height: 100vh; border-right:2px solid #555;left: 0px;top: 60px;padding: 20px;">
-    
-        <div id="infoHome" style="display: flex; flex-direction:column;align-items: center;"></div>
-        <a href="">item do menu 1</a><br>
-        <a href="">item do menu 2</a><br>
-        <a href="">item do menu 3</a><br>
-        <a href="">item do menu 4</a><br>
+    <div id="sidebar">
+        <div id="sidebar-header">
+            <img src='asserts/images/Group 114.svg' id="menu-lateral-logo">
+        </div>
+        <div id="infoHome" style="display: flex; flex-direction:column;align-items: center;">
+            <img src='http://github.com/santospgs.png' id="usuario-foto" width='54px' style='border-radius:100%;'> 
+            <label id="usuario-nome">Paulo Santos</label>
+        </div>
+        <div id="opcoes-menu">
+            <div class="menu-item">
+                <i class="fa-solid fa-house"></i>
+                <a href="" >Página inicial</a><br>
+            </div>
+            <div class="menu-item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a id="buscaprof">Buscar profissionais</a><br>
+            </div>
+            <div class="menu-item">
+                <i class="fa-solid fa-bell"></i>
+                <a href="" >Notificações</a><br>
+            </div>
+            <div class="menu-item">
+                <i class="fa-solid fa-house"></i>
+                <a href="" >Mensangens</a><br>
+            </div>
+            <div class="menu-item">
+                <i class="fa-solid fa-user-plus"></i>
+                <a href="" >Conexões</a><br>
+            </div>
+            <div class="menu-item">
+                <i class="fa-solid fa-house"></i>
+                <a href="" >Minhas sessões</a><br>
+            </div>
+            <div class="menu-item">
+                <i class="fa-solid fa-clipboard"></i>
+                <a href="" >Torne-se um mentor</a><br>
+            </div>
+            <br><br><br><br>
+            <div class="menu-item">
+                <i class="fa-solid fa-gear"></i>
+                <a href="" >Configurações</a><br>
+            </div>
+            <div class="menu-item">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <a href="" >Sair</a><br>
+            </div>
+        </div> 
     </div>
+    <div id="conteudo">
+        <div id="menu-conteudo">
+            <button>Torne-se um mentor</button>
+            <i class="fa-solid fa-bell"></i>
+            <input type="text">            
+        </div>
+        <div id="exibir"></div>
+    </div> 
+    
+    <span id="idMentor" style="display: none;"></span>
+
 </body>
-<script>    
-    $('#infoHome').html(function(){
-        $(this).append(`<img src='${sessionStorage.foto}' width='150px' style='border-radius:100%;'>`)
-        $(this).append(`<p style='margin-left:10px;cursor:pointer;'>${sessionStorage.nome}</p>`)
-    })
+<script>
+    $(document).ready(function(){
+        $("#exibir").load('mentores.html')
+
+        $('#infoHome').html(function(){
+            $("#usuarioFoto").append(``)
+            $(this).append(`<p style='margin-left:10px;cursor:pointer;'>${sessionStorage.nome}</p>`)
+        })
+
+        $("#buscaprof").click(function(){
+            $("#exibir").load('mentores.html')
+        })
+    })    
 </script>
 </html>

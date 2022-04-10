@@ -58,24 +58,107 @@ h1, h2, h3, h4, h5, h6{
     cursor: pointer;
 }
 
+#main{
+    display: flex;
+    flex-direction: column;
+}
+
 /*  BUSCA   */
+#mentoresTitulo{
+    position: relative;
+    top: 57px;
+    margin-left: 21px;
+    width: 390px; 
+    height: 106px;   
+    font-size: 44px;
+    font-weight: 500;
+}
+
 #busca{
     position: relative;
-    justify-content: center;
-    top: 60px;
-    width: 100vw;
+    width: 70%;
+    margin-left: 21px;
+    top:103px;
     height: 80px;
+    padding: 0;
 }
 
-/*  CONTEÚDO    */
-.content{
+#info{
     position: relative;
+    top:100px;
+    left: -31px;
     display: flex;
-    width: 100vw;
-    height: 100vh;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
+.divMentor{
+    position: relative;
+    background-color: #fff;     
+    border-radius: 16px;    
+    min-width: 256px; 
+    min-height: 336px;
+    margin: 0px 39px 20px 0px; /*top rigth bottom lef*/
+    font-size:15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease-in-out; 
+    
+    border: solid 2px #FE4400;
+}
+
+.mentorImg{
+    position: absolute;
+    top:32px;
+    width: 157px;
+    border-radius: 100%;
+}
+
+.mentorNome{
+    position: absolute;
+    top:205px;
+    left: 16px;
+    color: #FE4400;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.mentorCargo{
+    position: absolute;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2C3131;
+    top:241px;
+    left: 16px;
+}
+
+.mentorEsp{
+    position: absolute;
+    top: 278px;
+    left: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.itemEspc{
+    display: inline;
+    background-color: #E9E9E9;
+    height: 31px;
+    border-radius: 4px;
+    margin-right: 8px;
+    font-size: 12px;
+    padding: 6px 8px;
+}
+
+.divMentor:hover{
+    cursor: pointer;
+}
+
+
+/*  CHAT */
 .chat{
     background-color: green;
     position: fixed;
@@ -104,86 +187,6 @@ h1, h2, h3, h4, h5, h6{
     background: #888;
     border-radius: 5px;
 }
-
-#main{
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-}
-
-#info{
-    position: relative;
-    right: 0px;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0;
-}
-
-.divMentor{
-    position: relative;
-    background-color: #C4C4C4; 
-    border-radius: 16px;
-    
-    min-width: 256px; 
-    min-height: 336px; 
-    margin-bottom:20px;
-    margin-right: 39px; 
-    font-size:15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: all .2s ease-in-out;  
-}
-
-.mentorImg{
-    position: absolute;
-    top:32px;
-    width: 157px;
-    border-radius: 100%;
-}
-
-.mentorNome{
-    position: absolute;
-    top:205px;
-    left: 16px;
-    color: black;
-    font-size: 20px;
-}
-
-.mentorEmail{
-    position: absolute;
-    font-size: 14px;
-    top:241px;
-    left: 16px;
-}
-
-.mentorEsp{
-    position: absolute;
-    top: 278px;
-    left: 16px;
-    display: flex;
-    align-items: center;
-}
-
-.itemEspc{
-    display: inline;
-    background-color: #E9E9E9;
-    height: 31px;
-    border-radius: 4px;
-    margin-right: 8px;
-    font-size: 12px;
-    padding: 6px 8px;
-}
-
-.divMentor:hover{
-    cursor: pointer;
-}
-
 
 /*  RESPONSIVIDADE  */
 @media (max-width: 1000px) {
