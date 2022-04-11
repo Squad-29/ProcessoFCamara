@@ -85,6 +85,7 @@ body{
     height: 35px;
     top: 15px;
     right: 20px;
+    margin-left: 15px;
     background: #FFFFFF;
     border: none;
     box-sizing: border-box;
@@ -119,9 +120,15 @@ body{
     left: calc(50% - 354px/2 + 247px);
     top: calc(50% - 36px/2 - 713.5px);
     background: rgba(250, 250, 250, 0.93);
+    padding-left: 15px;
     border-radius: 10px;
     border: none;
     outline: none;
+    font-size: 14px;
+}
+
+#buscar-mentor::placeholder{
+    font-size: 14px;
 }
 
 #notificacoes{

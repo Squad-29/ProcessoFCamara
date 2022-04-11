@@ -16,7 +16,7 @@ a:link:hover, a:visited:hover{
 }
 
 .lateral{
-    background-color: rgb(254, 68, 0);
+    background-image: url('/asserts/images/Group_137.svg');
     width: 60%;
     height: 100vh;
     display: flex;
