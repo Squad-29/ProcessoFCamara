@@ -2,7 +2,7 @@
     width: 800px;
     position: relative;
     top: 56px;
-    left:40px
+    left:40px;
 }
 
 #avatarMentor{
@@ -30,51 +30,58 @@
 #bioMentor{
     position: absolute;
     top:308px;
-    width: 640px;
+    width: 594px;
     font-weight: 300;
     font-size: 20px;
 }	
+
+#formMentor{
+    position: relative;
+    top: 329px;
+    height: 400px;
+}
+
+#txtExp{
+}
+
+#especMentor{
+    top: 68px;
+}
+
+#txtEduc{
+    top: 173px;
+}
+
+#educaMentor{
+    top: 231px;
+}
 
 #especMentor, #educaMentor{
     position: absolute;
     width: 447px;
     height: 65px;
-    background: #C4C4C4;
+    background: #fff;
+    border: 1px solid #CACACA;
+    border-radius: 5px;
+    padding: 15px;
 }
 
-#especMentor{
-    top:584px;
-}
-
-#educaMentor{
-    top:719px;
+#txtExp, #txtEduc{
+    position: absolute;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 120%;
 }
 
 #horarioMentor{}
 
-#txtExp{
-    position: absolute;
-    top:524px;
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 120%;
-}
-
-#txtEduc{
-    position: absolute;
-    top:632px;
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 120%;
-}
-
 #btnSessao{
     position: absolute;
-    top:308px;
-    left:672px;
-    width: 448px;
-    height: 92px;
-    background-color: #CACACA;
+    top:396px;
+    left:664px;
+    width: 346px;
+    height: 48px;
+    background-color: #FE4400;
     border-radius: 4px;
     display: flex;
     flex-direction: row;
@@ -84,4 +91,5 @@
     cursor: pointer;
     font-size: 24px;
     font-weight: 500;
+    color: #fff;
 }
