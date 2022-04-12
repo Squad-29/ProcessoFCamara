@@ -23,7 +23,7 @@
 	<div id="infoMentor">
 		<div id="info-mentor-header">
 			<img id="avatarMentor" src="">	
-			<!--<div id="idMentor">Id: </div> -->
+			<div id="idMentor1" style="display: none;"></div>
 			<h4 id="nomeMentor"></h4>
 			<div id="cargoMentor"></div>
 
@@ -43,7 +43,8 @@
 				<button>Depoimentos</button>
 			</div>
 			<div id="bioMentor"></div>
-			<div id="btnSessao" data-toggle="modal" data-target="#exampleModalCenter">Marcar uma sessão</div>
+			<div id="btnSessao" data-toggle="modal" data-target="#exampleModalCenter">Marcar sessão</div>
+			<label id="msg-btn-sessao">Marque uma sessão de mentoria ou um bate papo</label>
 		</div>
 		
 		<!-- <div id="emailMentor"></div> -->
@@ -74,26 +75,26 @@
 					</div>
 					<div id="sessao-data">
 						<label for="">Dias disponíveis</label><br>
-						<button class="btn-sessao-dia">14</button>
-						<button class="btn-sessao-dia">15</button>
-						<button class="btn-sessao-dia">16</button>
-						<button class="btn-sessao-dia">17</button>
-						<button class="btn-sessao-dia">18</button>
+						<button id="dia1" class="btn-sessao-dia">14</button>
+						<button id="dia2" class="btn-sessao-dia">15</button>
+						<button id="dia3" class="btn-sessao-dia">16</button>
+						<button id="dia4" class="btn-sessao-dia">17</button>
+						<button id="dia5" class="btn-sessao-dia">18</button>
 					</div>
 					<div id="sessao-horario">
 						<label for="">Horários disponíveis</label><br>
-						<select name="" id="">
-							<option value=""></option>
-							<option value="7">7:00</option>
-							<option value="8">8:00</option>
-							<option value="9">9:00</option>
-							<option value="10">10:00</option>
+						<select name="" id="select-hora" class="disabled" disabled>
+							<option value="0">Selecione o horário</option>
+							<option value="1">14:00</option>
+							<option value="2">18:30</option>
+							<option value="3">20:00</option>
 						</select>
 					</div>
 				</div>
 				<div class="modal-footer" style="border:none;"><!-- 
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-					<button type="button" id="agendar" class="btn btn-primary">Continuar</button>
+					<button type="button" id="agendar">Continuar</button>
+					<div id="resultado-mentoria"></div>
 				</div>
 			</div>
 		</div>
@@ -101,5 +102,5 @@
 </body>
 <script src="js/script.js"></script>
 <script src="js/mentor.js"></script>
-<script src="js/agendaSessao.js"></script>
+<script src="js/sessoes.js"></script>
 </html>

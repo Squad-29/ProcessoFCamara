@@ -2,7 +2,7 @@
     {   
         "id" : 1,
         "nome" : "Ítalo Gabriel",
-        "bio" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at risus purus. Pellentesque ut vulputate augue. Phasellus placerat lectus ornare ligula aliquam, nec dignissim orci ullamcorper. Nullam rutrum vitae neque sit amet congue. Suspendisse potenti.",
+        "bio" : "Sou um Mestre Scrum na FCamara e tenho como principal função gerenciar o fluxo de trabalho das equipes. Sinta-se livre para conversar e tirar dúvidas comigo sobre Agile Framework, Encontro Efetivo, Scrum e qualquer outra coisa no Mundo de Gestão de Produtos!",
         "email" : "italogabriel0@oshare.com",
         "cargo" : "Scrum Master",
         "espec" : ["Organização", "Empatia"],

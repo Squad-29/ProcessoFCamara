@@ -24,12 +24,7 @@ $(document).ready( function(){
             c = 1
         } else {
             return
-        }
-        
-    });
-    
-    $('.menuFaq').click(function(){
-        $('.content').load('faq.html');
+        }        
     });
     
     //$('.infoUsuario').html(`Bem vindo ${sessionStorage.nome}`);

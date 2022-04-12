@@ -15,12 +15,15 @@ $(document).ready(function(){
         $("#usuario-nome,#usuario-foto,#config-usuario,#notificacoes").hide()         
     }         
 
+    $("#sessoes").click(function(){
+        $("#exibir").load('sessoes.html')
+    })
+
     $("#buscaprof").click(function(){
         $("#exibir").load('mentores.html')
     })
 
     $("#btn-login").click(function(){
         window.location = 'login.html'
-    })
-    
+    })    
 })   

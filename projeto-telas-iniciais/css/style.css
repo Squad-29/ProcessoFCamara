@@ -4,7 +4,6 @@
 @import url('http://fonts.cdnfonts.com/css/montserrat?styles=17402,17405,17395,17398,17400,17403,17391,17393,17389');
 /*  BODY: font-family: 'Montserrat', sans-serif;*/
 
-
 body{   
     display: flex;
     flex-direction: column;
@@ -79,10 +78,7 @@ h1, h2, h3, h4, h5, h6{
     height: 80px;
     padding: 0;
     display: flex;
-
 }
-
-
 
 #busca select{  
     background: #FFFFFF;
@@ -134,7 +130,7 @@ h1, h2, h3, h4, h5, h6{
 
 .divMentor{
     position: relative;
-    background-color: #fff;     
+    background-color: rgba(233, 233, 233, 0.31);     
     border-radius: 16px;    
     min-width: 256px; 
     min-height: 336px;
@@ -144,9 +140,13 @@ h1, h2, h3, h4, h5, h6{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all .2s ease-in-out; 
-    
-    border: solid 2px #FE4400;
+    transition: all .2s ease-in-out;     
+    border: 2px solid rgba(233, 233, 233, 0.31);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.divMentor:hover{
+    border: 2px solid rgb(254, 68, 0);
 }
 
 .mentorImg{

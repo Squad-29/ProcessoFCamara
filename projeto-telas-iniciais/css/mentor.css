@@ -85,16 +85,40 @@
     width: 346px;
     height: 48px;
     background-color: #FE4400;
-    border-radius: 4px;
+    border-radius: 8px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 6px 8px;
-    cursor: pointer;
-    font-size: 24px;
-    font-weight: 500;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
     color: #fff;
+    padding: 14px 28px;
+    cursor: pointer;
+}
+
+#btnSessao:hover{
+    background-color: #fe662e;
+    color: #FFFFFF;
+}
+
+#btnSessao:active{
+    background-color: #dd3b00;
+    color: #FFFFFF;
+}
+
+#msg-btn-sessao{
+    position: absolute;
+    top:205px;
+    left:715px;
+    width: 245px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
 }
 
 #formMentor{
@@ -192,14 +216,15 @@
     text-align: center;
 }
 
-.btn-sessao-selected{
+.btn-tipo-selected, .btn-dia-selected{
     background: #36357E;
     color: #FFFFFF;
 }
 
-.modal-content select{  
-    background: #FFFFFF;
-    border: 2px solid #36357E;
+#select-hora{  
+    background: #E9E9E9;
+    border: 2px solid #CACACA;
+    color: #A9A9A9;
     width: 280px;
     height: 60px;
     box-sizing: border-box;
@@ -239,13 +264,25 @@
     margin: 0px 0px;
 }
 
+#resultado-mentoria{
+    color: #FF0000;
+    font-size: 12px;
+    line-height: 100%;
+}
+
 .modal-footer{
     display: flex;
     flex-direction: column;
 }
 
 .modal-footer button:hover{
+    background-color: #fe662e;
+    color: #FFFFFF;
+}
+
+.modal-footer button:active{
     background-color: #dd3b00;
     color: #FFFFFF;
 }
+
 

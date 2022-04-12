@@ -15,7 +15,7 @@ a:link,a:visited, a:link:hover, a:visited:hover{
 }
 
 .lateral{
-    background-image: url('/asserts/images/Group_137.svg');
+    background-image: url('/assets/images/Group_137.svg');
     width: 60%;
     height: 100vh;
     display: flex;
