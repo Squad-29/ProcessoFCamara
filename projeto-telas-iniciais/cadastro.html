@@ -12,20 +12,28 @@
 <body class="bodyCadastro">
 	<div class="lateral"></div>
 	<div class="formCadastro" class="form-group">
-		<a href="home.html" class="linkVoltar"><i class="fa fa-arrow-left"></i>Voltar</a><br><hr>
-		<form>
-			<h4 class="cadTitulo">Seja bem vindo à Orange Share</h4>
-			<h6 class="cadSubTitulo">Aprenda e cresca com a ajuda de mentores.</h6>
-			
-			<input type="text" id="usuarioNome" class="form-control input-form" placeholder="* Nome">
-			<input type="text" id="usuarioEmail" class="form-control input-form" placeholder="* Email">
-			<input type="password" id="usuarioSenha" class="form-control input-form" placeholder="* Senha" value="">
-			<input type="password" id="usuarioSenhaConfirm" class="form-control input-form" placeholder="* Confirmação de senha" value="">
-			<input type="text" id="usuarioFoto" class="form-control input-form" placeholder="Foto: insira o usuário do github">
-			<button type="submit" id="btnInserir" class="btn btn-primary">Concluir</button><br>
-		</form>		
-		<hr>
-		<label class="lblCadastro">Já é cadastrado? <a href="login.html">Clique aqui</a> para acessar.</label>
+		<img src="asserts/images/Group 114.svg" class="logoForm">
+		<div id="linhaLogo"></div>
+		<div id="form">
+			<h3 class="cadTitulo">Crie sua conta</h3>
+			<h6 class="cadSubTitulo">E conecte-se com os <span style="color:rgb(254, 68, 0);">#SangueLaranja</span> de todo Brasil</h6><br>
+			<form>				
+				<label class="formLabel" for="usuarioSenha">Nome</label><br>
+				<input type="text" id="usuarioNome" class="input-form" placeholder="* Nome" required><br>
+
+				<label class="formLabel"  for="usuarioEmail">E-mail</label><br>
+				<input type="text" id="usuarioEmail" class="input-form" placeholder="* Email" required><br>
+
+				<label class="formLabel"  for="usuarioSenha">Senha</label><br>
+				<input type="password" id="usuarioSenha" class="input-form" placeholder="* Senha" value=""><br>
+
+				<label class="formLabel"  for="usuarioSenhaConfirm">Confirmação de senha</label><br>
+				<input type="password" id="usuarioSenhaConfirm" class="input-form" placeholder="* Confirmação de senha" value=""><br>
+
+				<button type="submit" id="btnInserir" class="btn-form">Concluir</button><br>
+			</form>		
+
+		<label class="lblCadastro">Já possui uma conta? <a href="login.html">Acesse já</a></label>
 	</div>
 </body>
 </html>

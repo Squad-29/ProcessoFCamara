@@ -1,6 +1,5 @@
-a:link:hover, a:visited:hover{
+a:link,a:visited, a:link:hover, a:visited:hover{
     text-decoration: none;
-    font-weight: bold;
     color:rgb(254, 68, 0);
 }
 
@@ -36,36 +35,69 @@ a:link:hover, a:visited:hover{
     background-color: white;
 }
 
-.img-cadastro, .logo-cadastro{
-    width: 300px;
-    transition: all .5s ease-in-out;
+.logoForm{
+    position: absolute;
+    top: 120px;
+    width: 214px;
+}
+#linhaLogo{
+    display: none;
+    position: absolute;
+    top: 56px;
+    left: 0px;
+    width: 100%;
+    border-bottom: 1px solid #FEBBA2;
 }
 
-.linkVoltar{
-    color: #000;
-}
-
-a:link{
-    text-decoration: none;
+#form{
+    position: absolute;
+    top: 200px;
+    width: 400px;
 }
 
 .cadTitulo{
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 52.8px;
 }
 .cadSubTitulo{
     margin-bottom: 25px;
     font-weight: 300;
+    font-size: 14px;
+}
+
+.formLabel{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
 }
 
 .input-form{
+    width: 400px;
+    height:32px;
+    padding-left: 15px;
     font-size: 12px;
-    padding:16px, 24px, 16px, 24px;
-    height: 56px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #CACACA;
+    border-radius: 8px;
 }
 
 .lblCadastro{
-    font-size: 13px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 160%;
+}
+
+.btn-form{
+    background-color: rgb(254, 68, 0);
+    width: 400px;
+    height: 34px;
+    border: none ;
+    border-radius: 8px;
+    color:white;
+    margin: 10px 0 10px 0;
+
 }
 
 .cadTitulo,
@@ -76,14 +108,17 @@ a:link{
     transition: all .2s ease-in-out;
 }
 
-
 /*  RESPONSIVIDADE */
 @media (max-width:1100px) {
-    .img-cadastro,.logo-cadastro{
-        width: 200px;
+    .input-form{
+        width: 300px;
+        margin-bottom: 5px;
+    }
+    .btn-form{
+        width: 300px;
     }
     .cadTitulo{
-        font-size: 18px;
+        font-size: 30px;
     }
     .cadSubTitulo{
         font-size: 12px;
@@ -94,40 +129,69 @@ a:link{
     }
 }
 
-@media (max-width:680px){
+@media (max-width:800px){
     .bodyCadastro{
         flex-direction: column;
     }
-    .logo-cadastro{
-        width: 150px;
-    }
     .lateral{
-        width: 100vw;
-        height: 60px;
-    }
-    .img-cadastro{
         display: none;
     }
+    #form{
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .logoForm{
+        position: absolute;
+        top: 10px;
+        width: 170px;
+    }    
+    #linhaLogo{
+        display: initial;
+    }
+    .input-form{
+        margin-bottom: 15px;
+    }
+    #form,.btn-form,.input-form{
+        width: 330px;
+    }    
     .text_login{
         display: none;
     }
     .formCadastro, .formLogin{
         width: 100vw;
-        padding: 50px 30px 50px 30px;
+        display: flex;
+        justify-content: center;
     }     
 }
 
-
-@media (max-height:600px) {
+@media (max-width:550px) {
+    #form, .input-form, .btn-form{
+        width: 300px;
+    }
     .cadTitulo{
-        font-size: 18px;
+        width: 170px;
+        line-height: normal;
+    }
+    .input-form{
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-height:650px) {
+    .logoForm{
+        width: 180px;
+        top:20px
+    }
+    #form{top: 60px;}
+
+    .cadTitulo{
+        font-size: 30px;
+        margin-bottom: 0;
     }
     .cadSubTitulo{
         font-size: 12px;
-        margin-bottom: 10px;
-    }
-    .input-form{
-        height: 45px;
         margin-bottom: 10px;
     }
 }

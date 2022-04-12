@@ -11,24 +11,32 @@
 </head>
 <body class="bodyCadastro">
 	<div class="lateral">
-		
 	</div>
 	<div class="formLogin" class="form-group">
-		<a href="home.html" class="linkVoltar"><i class="fa fa-arrow-left"></i>Voltar</a>
-		<hr>
-		<h4 class="cadTitulo">Seja bem vindo à Orange Share</h4>
-		<h6 class="cadSubTitulo">Aprenda e cresca com a ajuda de mentores.</h6>
+		<img src="asserts/images/Group 114.svg" class="logoForm">
+		<div id="linhaLogo"></div>
+
+		<div id="form">
+			<h3 class="cadTitulo">Acesse a plataforma</h3>
+			<br><br>	
+			<label for="usuarioEmail">E-mail</label><br>	
+			<input type="text" id="usuarioEmail" class="input-form" placeholder="Insira seu email"><br>
+
+			<label for="usuarioSenha">Senha</label><br>
+			<input type="password" id="usuarioSenha" class="input-form" placeholder="Insira sua senha" value=""><br>
+			<i id="mostrarSenha" class="fa fa-eye" style="color: grey;"></i><br><br>
 			
-		<input type="text" id="usuarioEmail" class="form-control input-form" placeholder="Email">
-		<input type="password" id="usuarioSenha" class="form-control input-form" placeholder="Senha" value=""><i id="mostrarSenha" class="fa fa-eye" style="color: grey;"></i><br>
+			
+			<input type="checkbox" id="usuarioTipo">
+			<label style="font-size: 12px;" >Lembrar meus dados</label>
+			<label style="font-size: 12px;" >Esqueci minha senha</label><br><br>
+			
+			<button type="button" id="btnEntrar" class="btn-form">Entrar</button><br><br>
+
+			<label class="lblCadastro">Primeira vez aqui? <a href="cadastro.html">Crie sua conta</a></label><br><br>
+
+		</div>
 		
-		<input type="checkbox" id="usuarioTipo">
-		<label style="font-size: 12px;" >Lembrar meus dados</label>
-		<label style="font-size: 12px;" >Esqueci minha senha</label><br><br>
-		
-		<button type="button" id="btnEntrar" class="btn btn-primary">Entrar</button><br><br>
-		<hr>
-		<label class="lblCadastro">Ainda não tem uma conta? <a href="cadastro.html">Clique aqui</a> e registre-se.</label><br><br>
 	</div>
 </body>
 </html>

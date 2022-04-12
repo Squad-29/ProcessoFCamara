@@ -10,10 +10,6 @@ body{
     flex-direction: column;
 }
 
-::placeholder {
-    font-size: 10px;
-}
-
 h1, h2, h3, h4, h5, h6{
     font-family: 'Lato', sans-serif; 
 }
@@ -68,7 +64,7 @@ h1, h2, h3, h4, h5, h6{
 #mentoresTitulo{
     position: relative;
     top: 57px;
-    margin-left: 21px;
+    left:30px;
     width: 390px; 
     height: 106px;   
     font-size: 44px;
@@ -78,19 +74,61 @@ h1, h2, h3, h4, h5, h6{
 #busca{
     position: relative;
     width: 70%;
-    margin-left: 21px;
+    left: 30px;
     top:103px;
     height: 80px;
     padding: 0;
+    display: flex;
+
+}
+
+
+
+#busca select{  
+    background: #FFFFFF;
+    border: 1px solid #626262;
+    width: 180px;
+    height: 48px;
+    box-sizing: border-box;
+    margin-right:15px;
+    border-radius: 8px;
+    padding-left: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #626262;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+#busca input[type = text]{
+    background: rgba(250, 250, 250, 0.93);
+    border: 1px solid #626262;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 48px;
+    margin-right:15px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #626262;
+    padding: 20px;
+}
+
+#campo-busca{
+    width: 470px;
 }
 
 #info{
     position: relative;
     top:100px;
-    left: -31px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    left: 30px;
+    justify-content: left;
+    align-items: c;
     flex-wrap: wrap;
 }
 

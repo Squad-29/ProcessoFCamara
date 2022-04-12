@@ -21,4 +21,8 @@ $(document).ready(function(){
             }
         });            
     });
-})  
+
+    $(".btn-sessao-tipo, .btn-sessao-dia").click(function(){
+        $(this).toggleClass('btn-sessao-selected'); 
+    });
+});  
