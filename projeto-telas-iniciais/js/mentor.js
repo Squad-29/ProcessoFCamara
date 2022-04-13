@@ -40,4 +40,11 @@ $(document).ready(function(){
             $("#select-hora").prop("disabled",true);
         }         
     });
+
+    $("#btnSessao").click(function(){
+        console.log(sessionStorage.getItem('nome'))
+        if (sessionStorage.getItem('nome') == null){
+            window.location = 'login.html'
+        }
+    })
 });  

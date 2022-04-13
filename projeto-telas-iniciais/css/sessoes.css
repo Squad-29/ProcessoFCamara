@@ -115,3 +115,19 @@
     border: 1px solid #FE4400;
     color: #FE4400;
 }
+
+#btn-participar:hover{
+    background-color: #fe662e;
+}
+
+#btn-participar:active{
+    background-color: #dd3b00;
+}
+
+#btn-remarcar:hover{
+    background-color: #4c4ba3;
+}
+
+#btn-remarcar:active{
+    background-color: #2e2d64;
+}

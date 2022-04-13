@@ -23,7 +23,6 @@ $(document).ready(function(){
         ? JSON.parse(localStorage.getItem('usuarios'))
         : [];
 
-
         if($usuarioNome == '' || $usuarioEmail == '' || $usuarioSenha == '' || $usuarioSenhaConfirm == ''){
             alert('Verifique os campos em branco');
             return;

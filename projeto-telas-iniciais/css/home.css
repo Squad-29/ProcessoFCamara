@@ -49,6 +49,10 @@ body{
     color: #2C3131;
 }
 
+.menu-item-active{
+    color:#F43300;
+}
+
 .menu-item a,.menu-item a:visited{
     cursor: pointer;
     margin-left:18px;    

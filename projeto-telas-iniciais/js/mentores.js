@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    let testeFiltro = []
+    let habilidadeFiltrada = []
     let mentores = document.querySelector('#info')
     
     // fetch('https://reqres.in/api/users')
@@ -9,32 +11,96 @@ $(document).ready(function(){
     })
     .then(function(response){
 
-        //const pessoasFiltradas = response.filter((resposta) => resposta.cargo == 'Scrum Master')
-        //const nomePessoa = pessoasFiltradas.map(p => p.espec) 
-        //console.log(pessoasFiltradas)
-        //console.log(response[1].espec.filter())
+        exibeCards(response);
 
-        //response.data.forEach(function(user){
-        response.forEach(function(user){
-            let divMentor = document.createElement('div');
-            divMentor.setAttribute("id",user.id)
-            divMentor.classList.add('divMentor');
-            divMentor.innerHTML = '<img class="mentorImg" src="'+ user.avatar +'"/><span class="mentorNome">'+ user.nome +'</span><span class="mentorCargo">'+ user.cargo +'</span><div class="mentorEsp"><span class="itemEspc">'+user.espec[0]+'</span><span class="itemEspc">'+user.espec[1]+'</span></div>';
-            mentores.appendChild(divMentor);
+        function exibeCards(lista,habilidade){            
+            //response.data.forEach(function(user){
+            lista.forEach(function(user){
+                let divMentor = document.createElement('div');
+                divMentor.setAttribute("id",user.id)
+                divMentor.classList.add('divMentor');
+                divMentor.innerHTML = '<img class="mentorImg" src="'+ user.avatar +'"/><span class="mentorNome">'+ user.nome +'</span><span class="mentorCargo">'+ user.cargo +'</span><div class="mentorEsp"><span class="itemEspc">'+user.espec[0]+'</span><span class="itemEspc">'+user.espec[1]+'</span></div>';
+                mentores.appendChild(divMentor);
+            });
+
+            if (habilidade !== "habilidade"){
+                testeFiltro = lista
+            }
+            
+            // DIRECIONA O USUÁRIO PARA A PÁGINA DO MENTOR SELECIONADO    
+            $('.divMentor').click(function(){
+                $(".menu-item").removeClass('menu-item-active')
+                let idMentor = $(this).attr('id')
+                $("#idMentor").html(idMentor)
+                //window.location = 'mentor.html?id=' + $(this).attr('id')
+                $("#exibir").load('mentor.html?id=' + $(this).attr('id'))
+            });
+        }
+
+        // FILTRO QUE RETORNA OS VALORES DO CARGO SELECIONADO
+        $("#listaCargo").change(function(){
+            console.log(habilidadeFiltrada)
+            mentores.innerHTML = ''
+            let cargoSelecionado = $("#listaCargo option:selected").val();
+
+            if (cargoSelecionado == ''){
+                 testeFiltro = response
+            }           
+
+            if (habilidadeFiltrada.length != 0){                
+                const pessoasFiltradas = habilidadeFiltrada.filter((resposta) => resposta.cargo == cargoSelecionado)
+                console.log(pessoasFiltradas)
+                exibeCards(pessoasFiltradas,"");
+                return        
+            } else {
+                const pessoasFiltradas = response.filter((resposta) => resposta.cargo == cargoSelecionado)
+                if (cargoSelecionado != ""){
+                    exibeCards(pessoasFiltradas,"");
+                } else {
+                    exibeCards(response,"");
+                }
+            }
+                    
+            //console.log(pessoasFiltradas)
+            const nomePessoa = pessoasFiltradas.map(p => p.espec)
+            //console.log(response[1].espec.filter())
+            console.log(nomePessoa);                        
+        });
+        
+        // FILTRO QUE RETORNA OS VALORES DA HABILIDADE SELECIONADA
+        $("#listaHab").change(function(){
+            mentores.innerHTML = ''            
+            habilidadeFiltrada = []
+            let habilidadeSelecionada = $("#listaHab option:selected").val();
+            console.log(habilidadeSelecionada)                      
+
+            for(let i in testeFiltro){
+                for(let prop of testeFiltro[i].espec){
+                    if(prop == habilidadeSelecionada){
+                        habilidadeFiltrada.push(testeFiltro[i])
+                    }
+                }
+            }
+
+            if (habilidadeSelecionada != ""){
+                exibeCards(habilidadeFiltrada, "habilidade")
+            } else {
+                exibeCards(testeFiltro, "habilidade")
+            }
         });
 
         // INSERE TODOS OS VALORES UNICOS DE HABILIDADE EM UM SELECT
         $('#listaHab').html(function(){
             let habilidades = []
             response.forEach((mentor) => {                    
-                for(var i in response){                                              
+                for(let i in response){                                              
                     if (mentor.espec[i] != undefined && !habilidades.includes(mentor.espec[i])){                         
                         habilidades.push(mentor.espec[i])
                     }                                                             
                 }         
             })            
 
-            for (var h in habilidades){
+            for (let h in habilidades.sort()){
                 let option = document.createElement('option');
                 option.setAttribute('value',habilidades[h])
                 option.innerHTML = `${habilidades[h]}`;
@@ -51,30 +117,12 @@ $(document).ready(function(){
                 }                                                             
             })            
 
-            for (var c in cargos){
+            for (let c in cargos.sort()){
                 let option = document.createElement('option');
                 option.setAttribute('value',cargos[c])
                 option.innerHTML = `${cargos[c]}`;
                 $(this).append(option);
             }            
         })
-
-        // DIRECIONA O USUÁRIO PARA A PÁGINA DO MENTOR SELECIONADO    
-        $('.divMentor').click(function(){
-            var idMentor = $(this).attr('id')
-            $("#idMentor").html(idMentor)
-            //window.location = 'mentor.html?id=' + $(this).attr('id')
-            $("#exibir").load('mentor.html?id=' + $(this).attr('id'))
-        });
-    });  
-    
-    // RETORNA O VALOR DA HABILIDADE SELECIONADA
-    $("#listaHab").change(function(){
-        var valor = $("#listaHab option:selected").val();
-        console.log(valor);
-    });
-    
-    
-    // FILTROS 
-    
+    });   
 })
