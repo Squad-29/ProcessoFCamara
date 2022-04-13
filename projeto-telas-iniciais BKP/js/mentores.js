@@ -5,8 +5,8 @@ $(document).ready(function(){
     let mentores = document.querySelector('#info')
     
     // fetch('https://reqres.in/api/users')
-    //fetch('db/dbmentores.json')    
-    fetch('https://fc29api.herokuapp.com/codejava/api/v1/mentores')
+    
+    fetch('db/dbmentores.json')
     .then(function(response){
         return response.json()
     })
@@ -20,7 +20,7 @@ $(document).ready(function(){
                 let divMentor = document.createElement('div');
                 divMentor.setAttribute("id",user.id)
                 divMentor.classList.add('divMentor');
-                divMentor.innerHTML = '<img class="mentorImg" src="'+ user.avatar +'"/><span class="mentorNome">'+ user.nome +'</span><span class="mentorCargo">'+ user.cargo +'</span><div class="mentorEsp"><span class="itemEspc">'+(user.espec).split(';')[0]+'</span><span class="itemEspc">'+(user.espec).split(';')[1]+'</span></div>';
+                divMentor.innerHTML = '<img class="mentorImg" src="'+ user.avatar +'"/><span class="mentorNome">'+ user.nome +'</span><span class="mentorCargo">'+ user.cargo +'</span><div class="mentorEsp"><span class="itemEspc">'+user.espec[0]+'</span><span class="itemEspc">'+user.espec[1]+'</span></div>';
                 mentores.appendChild(divMentor);
             });
 

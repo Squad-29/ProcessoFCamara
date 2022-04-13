@@ -3,8 +3,7 @@ $(document).ready(function(){
     /* const urlParams = new URLSearchParams(window.location.search);
     const myParam = urlParams.get('id'); */		
 
-    //fetch('db/dbmentores.json')
-    fetch('https://fc29api.herokuapp.com/codejava/api/v1/mentores')
+    fetch('db/dbmentores.json')
     .then(function(response){
         return response.json()
     })

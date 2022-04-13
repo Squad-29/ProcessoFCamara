@@ -21,17 +21,13 @@ $(document).ready(function(){
         $(this).addClass('menu-item-active')             
     })
 
-    $("#inicial").click(function(){            
-        $("#exibir").load('inicial.html')
+    $("#sessoes").click(function(){            
+        $("#exibir").load('sessoes.html')
     })  
 
     $("#buscaprof").click(function(){
         $("#exibir").load('mentores.html')
     })
-
-    $("#sessoes").click(function(){            
-        $("#exibir").load('sessoes.html')
-    })  
 
     $("#btn-login").click(function(){
         window.location = 'login.html'

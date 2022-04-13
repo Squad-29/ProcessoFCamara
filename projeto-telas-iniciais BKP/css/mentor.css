@@ -1,0 +1,288 @@
+#infoMentor{
+    width: 800px;
+    position: relative;
+    top: 56px;
+    left:40px;
+}
+
+#avatarMentor{
+    border-radius: 100%;
+    width: 160px;
+}
+
+#nomeMentor{
+    position: absolute;
+    top:0px;
+    left:182px;
+    font-weight:500;
+    font-size: 36px;
+}
+
+#cargoMentor{
+    position: absolute;
+    top:52px;
+    left:182px;
+    font-weight: 500;
+    font-size:24px;
+    color: #FE4400;
+}
+
+#mensagem{
+    position: absolute;
+    top: 125px;
+    left: 182px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #36357E;
+}
+
+#mensagem a{
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+#mensagem i{
+    margin-right: 5px;
+}
+
+#info-mentor-middle{
+    position: relative;
+    top: 59px;
+    width: 594px;
+    height:250px;
+}
+
+#btn-biomentor button{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 120%;
+    color: #7E7E7E;    
+    border: none;
+    background: none;
+    margin-right: 25px;
+}
+
+#btn-biomentor .active{
+    font-weight: 800;
+    color: #FE4400;    
+}
+
+#bioMentor{
+    position: absolute;
+    top:67px;
+    width: 594px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+#btnSessao{
+    position: absolute;
+    top:150px;
+    left:664px;
+    width: 346px;
+    height: 48px;
+    background-color: #FE4400;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #fff;
+    padding: 14px 28px;
+    cursor: pointer;
+}
+
+#btnSessao:hover{
+    background-color: #fe662e;
+    color: #FFFFFF;
+}
+
+#btnSessao:active{
+    background-color: #dd3b00;
+    color: #FFFFFF;
+}
+
+#msg-btn-sessao{
+    position: absolute;
+    top:205px;
+    left:715px;
+    width: 245px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+}
+
+#formMentor{
+    position: relative;
+    top: 112px;
+    height: 400px;
+}
+
+#txtExp{
+}
+
+#especMentor{
+    top: 68px;
+}
+
+#txtEduc{
+    top: 173px;
+}
+
+#educaMentor{
+    top: 231px;
+}
+
+#especMentor, #educaMentor{
+    position: absolute;
+    width: 447px;
+    height: 65px;
+    background: #fff;
+    border: 1px solid #CACACA;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#txtExp, #txtEduc{
+    position: absolute;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+#horarioMentor{}
+
+/* MODAL AGENDAMENTO DE SESSÃO*/
+.modal-content label{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    color: #2C3131;
+}
+
+#sessao-tipo{
+    height: 134px;
+}
+
+#sessao-data{
+    height: 167px;
+}
+#sessao-horario{
+    height: 140px;
+}
+
+.btn-sessao-tipo{
+    width: 150px;
+    height: 48px;
+    padding: 5px 28px;
+    background: #FFFFFF;
+    border: 2px solid #36357E;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #626262;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.btn-sessao-dia{
+    background: #FFFFFF;
+    height: 81px;
+    width: 78px;
+    left: 410px;
+    top: 256px;
+    border-radius: 8px;
+    border: 2px solid #36357E;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+}
+
+.btn-tipo-selected, .btn-dia-selected{
+    background: #36357E;
+    color: #FFFFFF;
+}
+
+#select-hora{  
+    background: #E9E9E9;
+    border: 2px solid #CACACA;
+    color: #A9A9A9;
+    width: 280px;
+    height: 60px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.modal-content select option{  
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.modal-footer button{
+    width: 320px;
+    background-color: #FE4400;
+    color: #FFFFFF;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+#resultado-mentoria{
+    color: #FF0000;
+    font-size: 12px;
+    line-height: 100%;
+}
+
+.modal-footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-footer button:hover{
+    background-color: #fe662e;
+    color: #FFFFFF;
+}
+
+.modal-footer button:active{
+    background-color: #dd3b00;
+    color: #FFFFFF;
+}
+
+
