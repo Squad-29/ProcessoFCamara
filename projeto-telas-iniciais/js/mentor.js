@@ -44,6 +44,8 @@ $(document).ready(function(){
     });
 
     $("#btnSessao").click(function(){
+        $("#form-agendamento, .modal-footer").show()
+        $("#sucess-cadastro").hide()
         //console.log(sessionStorage.getItem('nome'))
         if (sessionStorage.getItem('nome') == null){
             window.location = 'login.html'

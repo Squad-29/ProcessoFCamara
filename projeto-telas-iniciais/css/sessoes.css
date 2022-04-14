@@ -150,3 +150,10 @@
 #btn-remarcar:active{
     background-color: #2e2d64;
 }
+
+@media (max-width:1000px){
+    #sessoes-subtitulo{
+        width: 540px;    
+        text-align: justify;
+    }
+}

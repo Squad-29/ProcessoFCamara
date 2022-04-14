@@ -41,7 +41,7 @@ $(document).ready(function(){
             
             sessionStorage.setItem('nome',current_user.nome)
             sessionStorage.setItem('foto',current_user.foto)
-            window.location.href="home.html"
+            window.location.href="index.html"
 
         } else {
             alert('Usuário ou senha inválidos!')

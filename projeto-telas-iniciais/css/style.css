@@ -72,7 +72,6 @@ h1, h2, h3, h4, h5, h6{
 
 #busca{
     position: relative;
-    width: 70%;
     left: 30px;
     top:103px;
     height: 80px;
@@ -132,8 +131,8 @@ h1, h2, h3, h4, h5, h6{
     position: relative;
     background-color: rgba(233, 233, 233, 0.31);     
     border-radius: 16px;    
-    min-width: 256px; 
-    min-height: 336px;
+    width: 256px; 
+    height: 336px;
     margin: 0px 39px 20px 0px; /*top rigth bottom lef*/
     font-size:15px;
     display: flex;
@@ -228,20 +227,110 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /*  RESPONSIVIDADE  */
+
+@media (max-width: 1460px) {
+    
+    #campo-busca{
+        width: 250px;
+        margin-bottom: 15px;
+    } 
+    
+    #busca{
+        width: 800px;
+    }
+
+    #busca select{
+        width: 130px;
+        margin-bottom: 15px;
+    }
+
+}
+
 @media (max-width: 1000px) {
+
+    #info{
+        top: 160px;
+    }
+
+    #campo-busca{
+        width: 550px;
+        margin-bottom: 15px;
+    } 
+
+    #busca{
+        display: flex;
+        flex-wrap: wrap;
+        width: 550px;
+    }
+
     #navbar input{
         width: 40px;
     }   
 }
 
-@media (max-width:600px) {
-    #info{
-        flex-direction: column;
+@media (max-width:500px) {
+    #mentoresTitulo{
+        font-size: 28px;
+    }
+
+    #campo-busca{
+        width: 330px;
+        margin-bottom: 15px;
     } 
-    
-    #divMentor{
-        padding: 0;
-    }         
+
+    #busca{
+        top:45px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 330px;
+    }
+
+    #busca select{
+        width: 150px;
+    }
+
+    #busca input[type = text]{
+        width: 330px;
+    }
+
+    #info{
+        width: 400px;
+        top: 180px;
+    }
+    .divMentor{   
+        width: 156px; 
+        height: 210px;
+        margin: 0px 20px 20px 0px; /*top rigth bottom lef*/
+    }
+        
+    .mentorImg{
+        top:20px;
+        width: 100px;
+    }
+
+    .mentorNome{
+        top:120px;
+        left: 8px;
+        color: #FE4400;
+        font-size: 14px;
+    }
+
+    .mentorCargo{
+        font-size: 12px;
+        top:140px;
+        left: 8px;
+    }
+
+    .mentorEsp{
+        top: 160px;
+        left: 8px;
+    }
+
+    .itemEspc{
+        margin-right: 5px;
+        font-size: 10px;
+        padding: 6px 6px;
+    }
 }
 
 @media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }

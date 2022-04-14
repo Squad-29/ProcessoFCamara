@@ -1,7 +1,7 @@
 //  SESSOES.JS
 $(document).ready(function(){
 
-    $("#sessoes-passadas, #sessoes-canceladas").hide()
+    $("#sessoes-passadas, #sessoes-canceladas, #sucess-cadastro").hide()
     
     $(".btn-menu").click(function(){
         $(".btn-menu").removeClass('btn-menu-active')
@@ -59,6 +59,9 @@ $(document).ready(function(){
             $("#resultado-mentoria").html(function(){
                 $(this).text('Cadastrado com sucesso');
                 $(this).css('color','#008900')
+                $("#form-agendamento, .modal-footer").hide()
+                $("#sucess-cadastro").show()
+
             })
         } else {
             $("#resultado-mentoria").text('Verifique as opções!');

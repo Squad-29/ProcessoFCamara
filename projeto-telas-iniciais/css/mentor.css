@@ -76,6 +76,7 @@
     width: 594px;
     font-weight: 300;
     font-size: 20px;
+    text-align: justify;
 }
 
 #btnSessao{
@@ -285,4 +286,133 @@
     color: #FFFFFF;
 }
 
+#sucess-cadastro h3{
+    width: 482px;
+    margin-top: 80px;
+    margin-left: -30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    text-align: center;
+    color: #2C3131;
+}
 
+#sucess-cadastro label{
+    margin-top: 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: #2C3131;
+}
+
+#sucess-cadastro img{
+    margin-top: 16px;
+    margin-left: 130px;
+    margin-bottom: 50px;
+}
+
+@media (max-width:1000px) { 
+
+    #infoMentor{
+        padding: 100px;
+    }
+
+    #nomeMentor{
+        top:100px;
+        left:285px;
+    }
+    
+    #cargoMentor{
+        top:150px;
+        left:285px;
+    }
+
+    #mensagem{
+        top: 300px;
+    }
+
+    #info-mentor-middle{        
+        top: 100px;
+    }
+
+    #bioMentor{
+        width: 450px;
+    }
+
+    #btnSessao{
+        width: 450px;
+        top: 650px;
+        left: 0px;
+        margin-bottom: 100px;
+        z-index: 100;
+    }
+
+    #msg-btn-sessao{
+        display: none;
+    }
+
+    #formMentor{
+        top: 160px;
+    }
+}
+
+@media (max-width:650px) {  
+    #infoMentor{
+        padding: 20px;
+        top: 30px;
+        left:8px;
+    }
+
+    #avatarMentor{
+        width: 95px;
+    }
+
+    #nomeMentor{
+        font-size: 32px;
+        top:25px;
+        left:130px;
+    }
+    
+    #cargoMentor{
+        font-size: 20px;
+        top:70px;
+        left:130px;
+    }
+
+    #mensagem{
+        top: 150px;
+        left: 30px;
+    }
+
+    #bioMentor{
+        width: 310px;
+    }
+
+    #btn-biomentor button{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+        color: #7E7E7E;    
+        border: none;
+        background: none;
+        margin-right: 10px;
+    }
+
+    #formMentor{
+        top: 230px;
+    }
+
+    #especMentor, #educaMentor{
+        width: 310px;
+    }
+
+    #btnSessao{
+        width: 310px;
+        top: 700px;
+        z-index: 100;
+    }
+
+}

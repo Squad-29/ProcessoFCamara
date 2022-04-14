@@ -10,11 +10,11 @@ $(document).ready( function(){
     } else {
         $(".regLog").hide()
         $('.menuHome').show()
-        $('.content').load('home.html')
+        $('.content').load('index.html')
     }
 // funções do menu
     $('.menuHome').click(function(){
-        $('.content').load('home.html');
+        $('.content').load('index.html');
     });
     
     $('.menuMentores').click(function(){

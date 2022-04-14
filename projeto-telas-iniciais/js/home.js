@@ -1,12 +1,21 @@
-//  HOME.JS
+//  index.js
 $(document).ready(function(){
             
 
     $('#sair').click(function(){
         sessionStorage.removeItem('nome')
         sessionStorage.removeItem('foto')
-        window.location = 'home.html'
+        window.location = 'index.html'
     });
+
+    $("#slide-menu").click(function(){
+        $("#sidebar").toggleClass("sidebar-hide")
+        $(this).toggleClass('btn-sidebar-s2')
+    })
+
+    $("#menu-back").click(function(){
+        $("#exibir").load("mentores.html")
+    })
     
     if(sessionStorage.nome != undefined){
         $('#usuario-nome').html(sessionStorage.nome[0].toUpperCase()+sessionStorage.nome.slice(1))
