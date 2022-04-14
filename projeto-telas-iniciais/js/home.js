@@ -1,6 +1,6 @@
 //  HOME.JS
 $(document).ready(function(){
-    $("#exibir").load('mentores.html')        
+            
 
     $('#sair').click(function(){
         sessionStorage.removeItem('nome')
@@ -11,9 +11,11 @@ $(document).ready(function(){
     if(sessionStorage.nome != undefined){
         $('#usuario-nome').html(sessionStorage.nome[0].toUpperCase()+sessionStorage.nome.slice(1))
         $('#usuario-foto').attr('src','https://www.citypng.com/public/uploads/small/11639594360nclmllzpmer2dvmrgsojcin90qmnuloytwrcohikyurvuyfzvhxeeaveigoiajks5w2nytyfpix678beyh4ykhgvmhkv3r3yj5hi.png')
-        $("#btn-login").hide()        
+        $("#btn-login").hide()
+        $("#exibir").load('inicial.html')        
     } else {
-        $("#usuario-nome,#usuario-foto,#config-usuario,#notificacoes").hide()         
+        $("#usuario-nome,#usuario-foto,#config-usuario,#notificacoes,.inicial").hide()
+        $("#exibir").load('mentores.html')         
     }         
     
     $(".menu-item").click(function(){

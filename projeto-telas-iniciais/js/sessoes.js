@@ -118,11 +118,12 @@ $(document).ready(function(){
                 sessoes[s].status = 'cancelada'
                 sessaoAlterada = sessoes[s]
                 console.log(sessaoAlterada)
-                sessoes.splice(sessoes[s],1,sessaoAlterada)
+                sessoes.splice(sessoes[s].id,1,sessaoAlterada)
                 console.log(sessoes)               
             };       
         };
-        localStorage.setItem('sessoes',JSON.stringify(sessoes));        
+        localStorage.setItem('sessoes',JSON.stringify(sessoes));
+        $("#exibir").load('sessoes.html')       
     });
 
     // REATIVAÇÃO DE MENTORIA
@@ -136,17 +137,13 @@ $(document).ready(function(){
                 sessoes[s].status = 'marcada'
                 sessaoAlterada = sessoes[s]
                 console.log(sessaoAlterada)
-                sessoes.splice(sessoes[s],1,sessaoAlterada)
-                console.log(sessoes)               
+                sessoes.splice(sessoes[s].id,1,sessaoAlterada)
+                console.log(sessoes)
             };       
         };
-        localStorage.setItem('sessoes',JSON.stringify(sessoes));        
+        localStorage.setItem('sessoes',JSON.stringify(sessoes));
+        $("#exibir").load('sessoes.html')
     });
     
     
 });
-
-
-
-
-

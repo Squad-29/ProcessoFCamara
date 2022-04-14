@@ -179,12 +179,12 @@ a:link,a:visited, a:link:hover, a:visited:hover{
     }
 }
 
-@media (max-height:650px) {
+@media (max-height:700px) {
     .logoForm{
         width: 180px;
         top:20px
     }
-    #form{top: 60px;}
+    #form{top: 100px;}
 
     .cadTitulo{
         font-size: 30px;

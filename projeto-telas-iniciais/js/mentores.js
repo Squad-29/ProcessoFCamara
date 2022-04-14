@@ -40,10 +40,10 @@ $(document).ready(function(){
 
         // FILTRO QUE RETORNA OS VALORES DO CARGO SELECIONADO
         $("#listaCargo").change(function(){
-            console.log(habilidadeFiltrada)
+            //console.log(habilidadeFiltrada)
             mentores.innerHTML = ''
             let cargoSelecionado = $("#listaCargo option:selected").val();
-
+            console.log(cargoSelecionado)
             if (cargoSelecionado == ''){
                  testeFiltro = response
             }           
@@ -63,9 +63,9 @@ $(document).ready(function(){
             }
                     
             //console.log(pessoasFiltradas)
-            const nomePessoa = pessoasFiltradas.map(p => p.espec)
+            //const nomePessoa = pessoasFiltradas.map(p => p.espec)
             //console.log(response[1].espec.filter())
-            console.log(nomePessoa);                        
+            //console.log(nomePessoa);                        
         });
         
         // FILTRO QUE RETORNA OS VALORES DA HABILIDADE SELECIONADA
@@ -73,10 +73,12 @@ $(document).ready(function(){
             mentores.innerHTML = ''            
             habilidadeFiltrada = []
             let habilidadeSelecionada = $("#listaHab option:selected").val();
+            console.log(testeFiltro)
+            console.log(habilidadeFiltrada)
             console.log(habilidadeSelecionada)
 
             for(let i in testeFiltro){
-                for(let prop of testeFiltro[i].espec){
+                for(let prop of testeFiltro[i].espec.split(";")){
                     if(prop == habilidadeSelecionada){
                         habilidadeFiltrada.push(testeFiltro[i])
                     }
@@ -84,6 +86,7 @@ $(document).ready(function(){
             }
 
             if (habilidadeSelecionada != ""){
+                console.log('aqui!')
                 exibeCards(habilidadeFiltrada, "habilidade")
             } else {
                 exibeCards(testeFiltro, "habilidade")
@@ -94,13 +97,15 @@ $(document).ready(function(){
         $('#listaHab').html(function(){
             let habilidades = []
             response.forEach((mentor) => {                    
-                for(let i in response){                                              
-                    if (mentor.espec[i] != undefined && !habilidades.includes(mentor.espec[i])){                         
-                        habilidades.push(mentor.espec[i])
+                for(let i in response){  
+                    let hab = mentor.espec.split(';')[i]
+                    //console.log(hab)                                            
+                    if (mentor.espec.split(';')[i] != undefined && !habilidades.includes(mentor.espec.split(';')[i])){                         
+                        habilidades.push(mentor.espec.split(';')[i])
                     }                                                             
                 }         
             })            
-
+            console.log(habilidades)
             for (let h in habilidades.sort()){
                 let option = document.createElement('option');
                 option.setAttribute('value',habilidades[h])

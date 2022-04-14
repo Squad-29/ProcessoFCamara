@@ -118,7 +118,7 @@ $(document).ready(function(){
                 sessoes[s].status = 'cancelada'
                 sessaoAlterada = sessoes[s]
                 console.log(sessaoAlterada)
-                sessoes.splice(sessoes[s],1,sessaoAlterada)
+                sessoes.splice(sessoes[s].id,1,sessaoAlterada)
                 console.log(sessoes)               
             };       
         };
@@ -136,7 +136,7 @@ $(document).ready(function(){
                 sessoes[s].status = 'marcada'
                 sessaoAlterada = sessoes[s]
                 console.log(sessaoAlterada)
-                sessoes.splice(sessoes[s],1,sessaoAlterada)
+                sessoes.splice(sessoes[s].id,1,sessaoAlterada)
                 console.log(sessoes)               
             };       
         };
@@ -145,8 +145,3 @@ $(document).ready(function(){
     
     
 });
-
-
-
-
-
