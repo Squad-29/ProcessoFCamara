@@ -29,9 +29,9 @@ Mencione as ferramentas que você usou para criar seu projeto
 
 ## ✒️ Autores
 
-Paulo Santos - Desenvolvedor Full Stack - https://github.com/santospgs
-Thiago José Oliveira - Desenvolvedor Full Stack - https://github.com/thizeh
-Cristiano Salaberry - Desenvolvedor Full Stack - https://github.com/qicbarros
+* Paulo Santos - Desenvolvedor Full Stack - https://github.com/santospgs
+* Thiago José Oliveira - Desenvolvedor Full Stack - https://github.com/thizeh
+* Cristiano Salaberry - Desenvolvedor Full Stack - https://github.com/qicbarros
 
 ## 🎁 Expressões de gratidão
 
