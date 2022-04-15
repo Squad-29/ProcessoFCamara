@@ -22,7 +22,7 @@ Para utilizar as features do site, basta fazer o cadastro e login para ser redir
 * [Visual Studio Code](https://code.visualstudio.com/) - Editor de código utilizado 
 * [Spring Boot](https://start.spring.io/) - Gerente de Dependência
 * [Heroku](https://dashboard.heroku.com/) - Usada para gerar a API do projeto
-* [HTML5, CSS3, JavaScript e Java] - Linguagens de programação utilizadas
+* HTML5, CSS3, JavaScript e Java - Linguagens de programação utilizadas
 
 ## ✒️ Autores
 
