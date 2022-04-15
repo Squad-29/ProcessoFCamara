@@ -1,12 +1,10 @@
 # Orange Share
 
-A Orange Share é um plataforma direcionada para colaboradores da FCAMARA que necessitam de encontram um mentor para determinados assuntos
+A Orange Share é um plataforma direcionada para colaboradores da FCAMARA que necessitam de encontram um mentor para o aprendizado e consultas sobre assuntos relacionados a tecnologia e liderança
 
 ## 🚀 Começando
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
-
-Consulte **Implantação** para saber como implantar o projeto.
 
 ### 📋 Pré-requisitos e 🔧 Instalação
 
@@ -20,8 +18,6 @@ Após instalar o editor de código VSCode, instalar a extensão Live Server. Abr
 Para utilizar as features do site, basta fazer o cadastro e login para ser redirecionado a página do seu perfil.
 
 ## 🛠️ Construído com
-
-Mencione as ferramentas que você usou para criar seu projeto
 
 * [Visual Studio Code](https://code.visualstudio.com/) - O framework web usado
 * [Spring Boot](https://start.spring.io/) - Gerente de Dependência
