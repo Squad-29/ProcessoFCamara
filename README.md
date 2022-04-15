@@ -33,8 +33,8 @@ Mencione as ferramentas que você usou para criar seu projeto
 * Thiago José Oliveira - Desenvolvedor Full Stack - https://github.com/thizeh
 * Cristiano Salaberry - Desenvolvedor Full Stack - https://github.com/qicbarros
 
-## 🎁 Expressões de gratidão
+## 🎁 Venha ser sangue laranja!
 
 * Conte a outras pessoas sobre este projeto 📢
-* Convide alguém da equipe para uma cerveja 🍺 
-* Obrigado publicamente 🤓.
+* Conheça a FCamara https://www.fcamara.com.br/ 🤓
+* Agradecemos ao grupo FCamara pela oportunidade.
