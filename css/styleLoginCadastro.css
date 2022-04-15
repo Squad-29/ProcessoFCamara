@@ -29,7 +29,7 @@ a:link,a:visited, a:link:hover, a:visited:hover{
 
 .formCadastro, .formLogin{
     width: 40%;
-    height: 100vh;
+    height: 100%;
     margin: auto 80px auto 80px; 
     padding-top: 30px;  
     background-color: white;
@@ -105,11 +105,13 @@ a:link,a:visited, a:link:hover, a:visited:hover{
 .img-cadastro,
 .logo-cadastro,
 .input-form{
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
 
 /*  RESPONSIVIDADE */
-@media (max-width:1100px) {
+@media (max-width:1100px){
     .input-form{
         width: 300px;
         margin-bottom: 5px;
@@ -129,7 +131,7 @@ a:link,a:visited, a:link:hover, a:visited:hover{
     }
 }
 
-@media (max-width:800px){
+@media (max-width:850px) {
     .bodyCadastro{
         flex-direction: column;
     }
@@ -142,44 +144,59 @@ a:link,a:visited, a:link:hover, a:visited:hover{
         flex-direction: column;
         justify-content: center;
     }
+
     .logoForm{
         position: absolute;
         top: 10px;
         width: 170px;
     }    
+
     #linhaLogo{
         display: initial;
     }
+
     .input-form{
         margin-bottom: 15px;
     }
+
     #form,.btn-form,.input-form{
         width: 330px;
-    }    
+    } 
+
     .text_login{
         display: none;
     }
+
     .formCadastro, .formLogin{
-        width: 100vw;
+        width: 100%;
         display: flex;
         justify-content: center;
     }     
 }
 
-@media (max-width:550px) {
+@media (max-width:450px){
+    
     #form, .input-form, .btn-form{
-        width: 300px;
+        width: 300px;    
     }
+
     .cadTitulo{
         width: 170px;
         line-height: normal;
     }
+
     .input-form{
         margin-bottom: 15px;
     }
+
+    .formCadastro, .formLogin{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }    
 }
 
-@media (max-height:700px) {
+@media (max-height:1100px) {
     .logoForm{
         width: 180px;
         top:20px
@@ -194,12 +211,5 @@ a:link,a:visited, a:link:hover, a:visited:hover{
         font-size: 12px;
         margin-bottom: 10px;
     }
+    
 }
-
-@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
-@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
-@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
-@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
-@media (min-width:1281px) { /* hi-res laptops and desktops */ }
-

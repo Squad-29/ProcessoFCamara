@@ -42,7 +42,6 @@ $(document).ready(function(){
 
         if($("#btn-mentoria,#btn-batepapo").hasClass("btn-tipo-selected") && $(".btn-sessao-dia").hasClass("btn-dia-selected") && 
         $("#select-hora option:selected").val() != "0"){
-           // console.log('passou')
             let nomeMentor = $("#nomeMentor").html()
             let tipoSessao = $(".btn-tipo-selected").html()
             let diaSessao = $(".btn-dia-selected").html()
@@ -120,9 +119,7 @@ $(document).ready(function(){
             if (sessoes[s].id == btnClicado){ 
                 sessoes[s].status = 'cancelada'
                 sessaoAlterada = sessoes[s]
-                console.log(sessaoAlterada)
                 sessoes.splice(sessoes[s].id,1,sessaoAlterada)
-                console.log(sessoes)               
             };       
         };
         localStorage.setItem('sessoes',JSON.stringify(sessoes));
@@ -139,9 +136,7 @@ $(document).ready(function(){
             if (sessoes[s].id == btnClicado){ 
                 sessoes[s].status = 'marcada'
                 sessaoAlterada = sessoes[s]
-                console.log(sessaoAlterada)
                 sessoes.splice(sessoes[s].id,1,sessaoAlterada)
-                console.log(sessoes)
             };       
         };
         localStorage.setItem('sessoes',JSON.stringify(sessoes));

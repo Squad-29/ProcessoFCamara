@@ -33,7 +33,8 @@ $(document).ready(function(){
         if($usuarioNome == '' || $usuarioEmail == '' || $usuarioSenha == '' || $usuarioSenhaConfirm == ''){
             alert('Verifique os campos em branco');
             return;
-        } else if (usuario_dados.some((v) =>{return v.email == $usuarioEmail})){				
+        } else if (usuario_dados.some((v) =>{return v.email == $usuarioEmail})){	
+            alert('Email já cadastrado!')			
             $($('#usuarioEmail')).get(0).setCustomValidity('Email já cadastrado.');
             $($('#usuarioEmail')).get(0).reportValidity();
         } else {

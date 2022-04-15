@@ -188,6 +188,10 @@
   color: #2c3131;
 }
 
+.caixa-enviar2, .caixa-enviar3, .caixa-enviar4, .caixa-enviar5{
+  border-bottom:2px solid #bdbdbd ;
+}
+
 /* Pessoa1 */
 
 .caixa-enviar2 {
@@ -763,6 +767,10 @@
 }
 
 @media (max-width:650px) {
+  body{
+    width: 100vw;
+    height: 100vh;
+  }
 
   #duvidas{
     top: 330px;
@@ -782,6 +790,10 @@
     height: 150px;
     margin-bottom: 0px;
     border-bottom:2px solid #bdbdbd ;
+  }
+
+  .img-caixa-msg{
+    margin: 0px;
   }
 
   .img-caixa-msg, .img-caixa-msg2,.img-caixa-msg3,.img-caixa-msg4, .img-caixa-msg5{
@@ -815,6 +827,7 @@
     height: 20px;
     margin: 80px 0px 0px 250px;
     padding: 0px;
+    
   }
 
   .btn-enviar-txt2, .btn-enviar-txt3, .btn-enviar-txt4, .btn-enviar-txt5{
@@ -826,7 +839,8 @@
   }
 
  .data-laranja3, .data-laranja4, .data-laranja5{
-    left:-35px;
+    width: 100px;
+    left:0px;
   }
 
   .comments{

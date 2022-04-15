@@ -1,15 +1,11 @@
 //  MENTOR.JS
 $(document).ready(function(){
-    /* const urlParams = new URLSearchParams(window.location.search);
-    const myParam = urlParams.get('id'); */		
-
-    //fetch('db/dbmentores.json')
+    
     fetch('https://fc29api.herokuapp.com/codejava/api/v1/mentores')
     .then(function(response){
         return response.json()
     })
     .then(function(response){
-        //response.data.forEach(function(user){
         response.forEach(function(user){
             if($("#idMentor").html() == user.id){
                 $("#avatarMentor").attr("src",user.avatar)
@@ -46,7 +42,6 @@ $(document).ready(function(){
     $("#btnSessao").click(function(){
         $("#form-agendamento, .modal-footer").show()
         $("#sucess-cadastro").hide()
-        //console.log(sessionStorage.getItem('nome'))
         if (sessionStorage.getItem('nome') == null){
             window.location = 'login.html'
         }

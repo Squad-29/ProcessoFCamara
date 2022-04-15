@@ -4,8 +4,6 @@ $(document).ready(function(){
     let habilidadeFiltrada = []
     let mentores = document.querySelector('#info')
     
-    // fetch('https://reqres.in/api/users')
-    //fetch('db/dbmentores.json')    
     fetch('https://fc29api.herokuapp.com/codejava/api/v1/mentores')
     .then(function(response){
         return response.json()
@@ -14,8 +12,7 @@ $(document).ready(function(){
 
         exibeCards(response);
 
-        function exibeCards(lista,habilidade){            
-            //response.data.forEach(function(user){
+        function exibeCards(lista,habilidade){
             lista.forEach(function(user){
                 let divMentor = document.createElement('div');
                 divMentor.setAttribute("id",user.id)
@@ -33,24 +30,20 @@ $(document).ready(function(){
                 $(".menu-item").removeClass('menu-item-active')
                 let idMentor = $(this).attr('id')
                 $("#idMentor").html(idMentor)
-                //window.location = 'mentor.html?id=' + $(this).attr('id')
                 $("#exibir").load('mentor.html?id=' + $(this).attr('id'))
             });
         }
 
         // FILTRO QUE RETORNA OS VALORES DO CARGO SELECIONADO
         $("#listaCargo").change(function(){
-            //console.log(habilidadeFiltrada)
             mentores.innerHTML = ''
             let cargoSelecionado = $("#listaCargo option:selected").val();
-            console.log(cargoSelecionado)
             if (cargoSelecionado == ''){
                  testeFiltro = response
             }           
 
             if (habilidadeFiltrada.length != 0){                
                 const pessoasFiltradas = habilidadeFiltrada.filter((resposta) => resposta.cargo == cargoSelecionado)
-                console.log(pessoasFiltradas)
                 exibeCards(pessoasFiltradas,"");
                 return        
             } else {
@@ -60,12 +53,7 @@ $(document).ready(function(){
                 } else {
                     exibeCards(response,"");
                 }
-            }
-                    
-            //console.log(pessoasFiltradas)
-            //const nomePessoa = pessoasFiltradas.map(p => p.espec)
-            //console.log(response[1].espec.filter())
-            //console.log(nomePessoa);                        
+            }                       
         });
         
         // FILTRO QUE RETORNA OS VALORES DA HABILIDADE SELECIONADA
@@ -73,9 +61,6 @@ $(document).ready(function(){
             mentores.innerHTML = ''            
             habilidadeFiltrada = []
             let habilidadeSelecionada = $("#listaHab option:selected").val();
-            console.log(testeFiltro)
-            console.log(habilidadeFiltrada)
-            console.log(habilidadeSelecionada)
 
             for(let i in testeFiltro){
                 for(let prop of testeFiltro[i].espec.split(";")){
@@ -86,7 +71,6 @@ $(document).ready(function(){
             }
 
             if (habilidadeSelecionada != ""){
-                console.log('aqui!')
                 exibeCards(habilidadeFiltrada, "habilidade")
             } else {
                 exibeCards(testeFiltro, "habilidade")
@@ -98,14 +82,11 @@ $(document).ready(function(){
             let habilidades = []
             response.forEach((mentor) => {                    
                 for(let i in response){  
-                    let hab = mentor.espec.split(';')[i]
-                    //console.log(hab)                                            
                     if (mentor.espec.split(';')[i] != undefined && !habilidades.includes(mentor.espec.split(';')[i])){                         
                         habilidades.push(mentor.espec.split(';')[i])
                     }                                                             
                 }         
             })            
-            console.log(habilidades)
             for (let h in habilidades.sort()){
                 let option = document.createElement('option');
                 option.setAttribute('value',habilidades[h])

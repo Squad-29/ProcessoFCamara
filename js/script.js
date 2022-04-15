@@ -27,7 +27,6 @@ $(document).ready( function(){
         }        
     });
     
-    //$('.infoUsuario').html(`Bem vindo ${sessionStorage.nome}`);
     $('.infoUsuario').html(function(){
         $(this).append(`<p>Bem vindo ${sessionStorage.nome}</p>`)
         $(this).append(`<img src='${sessionStorage.foto}' width='30px' style='border-radius:100%;'>`)

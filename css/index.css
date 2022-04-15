@@ -89,10 +89,10 @@ body{
 
 .menu-item a,.menu-item a:visited{
     cursor: pointer;
-    margin-left:18px;    
+    margin-left:18px;
 }
 
-.menu-item a:hover{
+.menu-item:hover{
     color:#F43300;
 }
 
