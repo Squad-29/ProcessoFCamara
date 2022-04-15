@@ -92,8 +92,3 @@ Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](h
 * Conte a outras pessoas sobre este projeto 📢
 * Convide alguém da equipe para uma cerveja 🍺 
 * Obrigado publicamente 🤓.
-* etc.
-
-
----
-⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
