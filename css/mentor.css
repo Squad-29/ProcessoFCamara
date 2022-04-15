@@ -160,7 +160,35 @@
     line-height: 120%;
 }
 
-#horarioMentor{}
+#educa-titulo{
+    position: relative;
+    top: -5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: #FE4400;
+}
+
+#educa-local{
+    position: absolute;
+    top: 34px;
+    left:15px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #2C3131;
+}
+
+#educa-data{
+    position: absolute;
+    top: 22px;
+    left:345px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 160%;
+    color: #FE885C;
+}
 
 /* MODAL AGENDAMENTO DE SESSÃO*/
 .modal-content label{
