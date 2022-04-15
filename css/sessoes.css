@@ -43,6 +43,7 @@
 #sessoes-info{
     position: relative;
     width: 750px;
+    left: 0px;
     top:100px;
     display: flex;
     left: 30px;
@@ -72,6 +73,7 @@
 #sessoes-canceladas{
     position: absolute;
     top: 70px;
+    left: 100px;
     width: 750px;
     height: 100px;
 }
@@ -156,4 +158,55 @@
         width: 540px;    
         text-align: justify;
     }
+}
+
+@media (max-width:500px){
+    #sessoes-titulo{
+        font-size: 28px;
+        left: 17px;
+    }
+
+    #sessoes-futuras,#sessoes-passadas,#sessoes-canceladas, #sessoes-info{
+        width: 300px;
+    }
+    #sessoes-subtitulo{
+        width: 330px;
+        font-size: 16px;
+        font-weight: 300;
+        left: 17px;
+    }
+    .sessao-card{
+        width: 328px;
+        height: 163px;
+        padding: 24px;
+        left: 17px;
+    }
+    
+    #sessao-card-titulo{
+        font-size: 18px;
+    }
+    
+    #sessao-card-info{
+        font-size: 12px;
+    }    
+
+    .btn-sessao-agendada{
+        width: 88px;
+        height: 31px;
+        padding: 3px;
+        margin-right:2px;
+    }
+
+    .btn-menu{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px; 
+        margin-right: 10px;
+        padding: 0px;
+    }
+
+    #sessoes-info{
+        left:17px;
+    }
+    
 }

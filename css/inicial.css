@@ -1,3 +1,12 @@
+
+#forum{
+  border-right: 1px solid #CCCCCC;
+  width: 785px;
+  height:1500px;
+  position: absolute;
+  top:72px;
+}
+
 #orientacao{
   position: relative;
   top: 61px;
@@ -718,4 +727,136 @@
   width: 638px;
   border: 1px solid #cacaca;
   margin: 33px 0px 20px -7px;
+}
+
+#duvidas{
+  position: relative;top: 410px;
+}
+
+
+@media (max-width:1000px) { 
+  #orientacao{
+    left: 30px;
+    top: 30px;
+  }
+
+  #proximas-sessoes{
+    display: none;
+  }
+
+  #forum{
+    top: 350px;
+    width: 350px;
+    border: none;
+  }
+  .titulo-ana{
+    font-size: 28px;
+  }
+
+  .linha{
+    display: none;
+  }
+
+  .caixa-enviar2, .caixa-enviar3, .caixa-enviar4, .caixa-enviar5{
+    border-bottom:2px solid #bdbdbd ;
+  }
+}
+
+@media (max-width:650px) {
+
+  #duvidas{
+    top: 330px;
+  }
+
+  .titulo-ana{
+    font-size: 28px;
+  }
+
+  .caixa-enviar{
+    width: 328px; 
+    height: 128px; 
+  }
+
+  .caixa-enviar2, .caixa-enviar3, .caixa-enviar4, .caixa-enviar5{
+    width: 328px;
+    height: 150px;
+    margin-bottom: 0px;
+    border-bottom:2px solid #bdbdbd ;
+  }
+
+  .img-caixa-msg, .img-caixa-msg2,.img-caixa-msg3,.img-caixa-msg4, .img-caixa-msg5{
+    
+    width: 35px;
+    height: 35px;
+  }
+
+  .img-caixa-msg2,.img-caixa-msg3,.img-caixa-msg4, .img-caixa-msg5{
+    margin-left: 10px;
+    margin: 0px;
+    top: 60px;
+  }
+
+  .nome-laranja2, .nome-laranja3, .nome-laranja4, .nome-laranja5{
+    font-size: 14px;
+    left: 55px;
+    top:15px;
+  }
+
+  .caixa-texto2, .caixa-texto3, .caixa-texto4, .caixa-texto5{
+    left: 55px;
+    top: 35px;
+    width: 260px;
+    font-size: 12px;
+    margin: 0px;
+  }
+
+  .btn-enviar2, .btn-enviar3, .btn-enviar4, .btn-enviar5{
+    width: 67px;
+    height: 20px;
+    margin: 80px 0px 0px 250px;
+    padding: 0px;
+  }
+
+  .btn-enviar-txt2, .btn-enviar-txt3, .btn-enviar-txt4, .btn-enviar-txt5{
+    font-size: 10px;
+    top:0px;
+    padding-top: 0px;
+    margin: 0px;
+    top: 0px;
+  }
+
+ .data-laranja3, .data-laranja4, .data-laranja5{
+    left:-35px;
+  }
+
+  .comments{
+    position: relative;
+    margin-left: 0px;
+    top: -80px;
+    left: -80px;
+  }
+
+  .linha{
+    display: none;
+  }
+
+  .caixa-texto{
+    margin: 16px 0px 0px 50px;
+    width: 230px;
+    height: 60px;
+    font-size: 12px;
+  }
+  .btn-enviar{
+    margin: 35px 0px 0px 220px;
+    width: 75px;
+    height: 27px;
+    font-size: 8px;
+    padding:0px;
+    background: #A9A9A9;
+    border: 2px solid #CACACA;    ;
+  }
+
+  #duvidas{
+    width: 330px;
+  }
 }
